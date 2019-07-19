@@ -1,8 +1,10 @@
 @import 'core/settings';
-@import 'core/links';
+@import 'core/variables';
+@import 'core/mixins';
+@import 'components/buttons';
 
-body {
-	background: url('../images/logo-adalab-80px.png') center center no-repeat $color-white;
-	margin: 0;
-	height: 100vh;
-}
+// body {
+// 	background: url('../images/logo-adalab-80px.png') center center no-repeat $color-white;
+// 	margin: 0;
+// 	height: 100vh;
+// }

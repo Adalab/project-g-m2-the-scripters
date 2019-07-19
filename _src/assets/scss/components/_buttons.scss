@@ -1,0 +1,64 @@
+.button-start-mobile{
+  width: 129px;
+  height: 42px;
+  border-radius: 21px;
+  background-color: $dirty-blue;
+  border: none;
+  text-align: center;
+  @include Landing-StartText-mobile;
+}
+
+.button-reset-mobile{
+  width: 75px;
+  height: 30px;
+  border-radius: 15px;
+  border: solid 1px $white;
+  background-color: transparent;
+  box-sizing: border-box;
+    // text-align: center; -- como lleva icono no se
+  @include Cards-Card-ResetButton;
+  }
+
+.button-addImage-mobile{
+  width: 140px;
+  height: 30px;
+  border-radius: 3px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+  background-color: $dull-orange;
+  border: none;
+  text-align: center;
+  @include Cards-Form-ImageButton;
+}
+
+.button-Create-before-mobile{
+  width: 199px;
+  height: 50px;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+  background-color: $dull-orange;
+  border: none;
+  // text-align: center; -- como lleva icono no se
+  @include Cards-Form-CreateButton;
+}
+
+.button-Create-after-mobile{
+  width: 199px;
+  height: 50px;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+  background-color: #d5d5d5;
+  border: none;
+    // text-align: center; -- como lleva icono no se
+    @include Cards-Form-CreateButton;
+  }
+
+.button-Twitter-mobile{
+  width: 181px;
+  height: 30px;
+  border-radius: 3px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+  background-color: #00a0f5;
+  border: none;
+    // text-align: center; -- como lleva icono no se
+    @include Cards-Form-TwitterButton;
+  }

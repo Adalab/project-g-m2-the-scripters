@@ -1,0 +1,188 @@
+// FONTS MIXINS LANDING - MAIN - MOBILE
+@mixin Landing-Tiltle-mobile {
+  font-family: $font-family-Merri;
+  font-size: 19.2px;
+  font-weight: $font-weight-black;
+  line-height: normal;
+  color: $dull-orange;
+}
+
+@mixin Landing-text-mobile {
+  font-family: $font-family-Open;
+  font-size: 12.8px;
+  font-weight: $font-weight-normal;
+  line-height: normal;
+  color: $dark-green-blue;
+}
+
+@mixin Landing-listText-mobile {
+  font-family: $font-family-Open;
+  font-size: 12.8px;
+  font-weight: $font-weight-normal;
+  line-height: normal;
+  color: $dark-grey;
+}
+
+@mixin Landing-StartText-mobile {
+  font-family: $font-family-Open;
+  font-size: 16px;
+  font-weight: $font-weight-medium;
+  line-height: normal;
+  color: $white;
+}
+
+// FONTS MIXINS LANDING - MAIN - TABLET
+@mixin Landing-Tiltle-tablet {
+  font-family: $font-family-Merri;
+  font-size: 24px;
+  font-weight: $font-weight-black;
+  line-height: normal;
+  color: $dull-orange;
+}
+
+@mixin Landing-text-tablet {
+  font-family: $font-family-Open;
+  font-size: 16px;
+  font-weight: $font-weight-normal;
+  line-height: normal;
+  color: $dark-green-blue;
+}
+
+@mixin Landing-listText-tablet {
+  font-family: $font-family-Open;
+  font-size: 16px;
+  font-weight: $font-weight-normal;
+  line-height: normal;
+  color: $dark-grey;
+}
+
+@mixin Landing-StartText-tablet {
+  font-family: $font-family-Open;
+  font-size: 16px;
+  font-weight: $font-weight-medium;
+  line-height: normal;
+  color: $white;
+}
+
+// FONTS MIXINS - FOOTER - MOBILE & TABLET
+
+@mixin Footer-Copy {
+  font-family: $font-family-Open;
+  font-size: 14px;
+  font-weight: $font-weight-normal;
+  line-height: 1.43;
+  color: $grey-footer;  
+  opacity: 0.5;
+}
+
+// FONTS MIXINS CARDS - MAIN - CARDS - MOBILE & TABLET
+
+@mixin Cards-Card-ResetButton {
+  font-family: $font-family-Open;
+  font-size: 12px;
+  font-weight: $font-weight-normal;
+  line-height: 1.67;
+  color: $dark-grey;
+}
+
+@mixin Cards-Card-Name {
+  font-family: $font-family-Montse;
+  font-size: 18px;
+  font-weight: $font-weight-bold;
+  line-height: 1.11;
+  color: $dark-green-blue;
+}
+
+@mixin Cards-Card-Career {
+  font-family: $font-family-Montse;
+  font-size: 16px;
+  font-weight: $font-weight-normal;
+  line-height: 1.25;
+  color: $dark-grey;
+}
+
+@mixin Cards-Card-Career {
+  font-family: $font-family-Montse;
+  font-size: 16px;
+  font-weight: $font-weight-normal;
+  line-height: 1.25;
+  color: $dark-grey;
+}
+
+// FONTS MIXINS CARDS - MAIN - FORM - MOBILE & TABLET
+
+@mixin Cards-Form-Title {
+  font-family: $font-family-Open;
+  font-size: 18px;
+  font-weight: $font-weight-medium;
+  line-height: normal;
+  color: $dark-grey;
+}
+
+@mixin Cards-Form-ColorsText {
+  font-family: $font-family-Open;
+  font-size: 14px;
+  font-weight: $font-weight-normal;
+  line-height: normal;
+  color: $dark-grey;
+}
+
+@mixin Cards-Form-Labels {
+  font-family: $font-family-Open;
+  font-size: 14px;
+  font-weight: $font-weight-normal;
+  line-height: 1.43;
+  color: $dark-green-blue;
+}
+
+@mixin Cards-Form-Placeholders {
+  font-family: $font-family-Open;
+  font-size: 14px;
+  font-weight: $font-weight-normal;
+  line-height: 1.43;
+  color: $grey-placeholder;
+}
+
+@mixin Cards-Form-ImageButton {
+  font-family: $font-family-Open;
+  font-size: 14px;
+  font-weight: $font-weight-normal;
+  line-height: 1.43;
+  color: $white;
+}
+
+@mixin Cards-Form-CreateButton {
+  font-family: $font-family-Open;
+  font-size: 18px;
+  font-weight: $font-weight-medium;
+  line-height: normal;
+  color: $white;
+}
+
+@mixin Cards-Form-SuccessText {
+  font-family: $font-family-Open;
+  font-size: 18px;
+  font-weight: $font-weight-medium;
+  line-height: normal;
+  color: $dark-grey;
+}
+
+@mixin Cards-Form-Link {
+  font-family: $font-family-Open;
+  font-size: 12px;
+  font-weight: $font-weight-medium;
+  line-height: normal;
+  color: $dull-orange;
+}
+
+@mixin Cards-Form-TwitterButton {
+  font-family: $font-family-Open;
+  font-size: 14px;
+  font-weight: $font-weight-normal;
+  line-height: 1.43;
+  color: $white;
+}
+
+
+
+
