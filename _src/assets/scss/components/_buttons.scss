@@ -5,7 +5,7 @@
   background-color: $dirty-blue;
   border: none;
   text-align: center;
-  @include Landing-StartText-mobile;
+  @include Landing-StartText;
 }
 
 .button-reset-mobile{

@@ -23,7 +23,7 @@
   color: $dark-grey;
 }
 
-@mixin Landing-StartText-mobile {
+@mixin Landing-StartText {
   font-family: $font-family-Open;
   font-size: 16px;
   font-weight: $font-weight-medium;
@@ -56,14 +56,6 @@
   color: $dark-grey;
 }
 
-@mixin Landing-StartText-tablet {
-  font-family: $font-family-Open;
-  font-size: 16px;
-  font-weight: $font-weight-medium;
-  line-height: normal;
-  color: $white;
-}
-
 // FONTS MIXINS - FOOTER - MOBILE & TABLET
 
 @mixin Footer-Copy {
@@ -71,7 +63,7 @@
   font-size: 14px;
   font-weight: $font-weight-normal;
   line-height: 1.43;
-  color: $grey-footer;  
+  color: $grey-footer;
   opacity: 0.5;
 }
 
