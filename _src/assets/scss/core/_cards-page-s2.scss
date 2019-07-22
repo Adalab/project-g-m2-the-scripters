@@ -1,0 +1,18 @@
+.palette__row{
+  display: flex;
+  align-items: center;
+}
+
+.colors{
+  display: flex;
+  margin: 0 0 0 5px;
+  padding: 0;
+  list-style: none;
+}
+
+.color{
+  width: 30px;
+  height: 1px;
+  padding-top: 24px;
+  overflow: hidden;
+}
