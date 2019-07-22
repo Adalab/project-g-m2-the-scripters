@@ -14,6 +14,22 @@ body{
   max-width: 400px;
 }
 
+.form__fieldset{
+  position: relative;
+  border: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.form__fielset-legend{
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+  top:0;
+  left: 0;
+}
+
 .theme{
   margin: 0 0 20px;
   &:last-child{
@@ -83,6 +99,9 @@ margin: 0;
   &:last-child{
     margin: 0 0 30px;
   }
+}
+.form-text:placeholder{
+  @include Cards-Form-Placeholders;
 }
 
 .form-photo-preview{

@@ -1,8 +1,8 @@
 <section class="cards__section-2">
   <div class="wrapper">
   <form id="form" action="/signup" method="POST">
-<!-- <fieldset></fieldset> -->
-<!-- <legend>Elegir tema</legend> -->
+<fieldset class="form__fieldset">
+<legend class="form__fielset-legend">Elegir tema</legend>
     <div class="form__design collapsable">
       <h4 class="form__design-title form-title title-1">Diseña</h4>
     </div>
@@ -41,19 +41,20 @@
         </div>
       </div>
     </div>
-<!-- <fieldset></fieldset> -->
-<!-- <legend>Información personal:</legend> -->
+</fieldset>
+<fieldset class="form__fieldset">
+    <legend class="form__fielset-legend">Completar información</legend>
     <div class="form__fill collapsable">
       <h4 class="form__fill-title form-title title-2">Rellena</h4>
     </div>
     <div class="form__fill-content fill-container">
         <div class="form__fill-input">
           <label for="form-name" class="form-label">Nombre completo</label>
-          <input type="text" class="form-text" id="form-name" name="name"/>
+          <input type="text" class="form-text" id="form-name" name="name" placeholder="Ej: Sally Jill"/>
         </div>
         <div class="form__fill-input">
           <label for="form-career" class="form-label">Puesto</label>
-          <input type="text" class="form-text" id="form-career" name="job"/>
+          <input type="text" class="form-text" id="form-career" name="job" placeholder="Ej: Front-end unicorn"/>
         </div>
         <div class="form__fill-input">
           <label for="form-photo" class="form-label">Imagen de perfil</label>
@@ -63,21 +64,22 @@
         </div>
         <div class="form__fill-input">
           <label for="form-email" class="form-label">Email</label>
-          <input type="email" class="form-text" id="form-email" name="email"/>
+          <input type="email" class="form-text" id="form-email" name="email" placeholder="Ej: sally.hill@gmail.com"/>
         </div>
         <div class="form__fill-input">
           <label for="form-tel" class="form-label">Teléfono</label>
-          <input type="tel" class="form-text" id="form-tel" name="phone"/>
+          <input type="tel" class="form-text" id="form-tel" name="phone" placeholder="Ej: 555-55-55-55"/>
         </div>
         <div class="form__fill-input">
           <label for="form-linkedin" class="form-label">Linkedin</label>
-          <input type="tel" class="form-text" id="form-linkedin" name="linkedin"/>
+          <input type="tel" class="form-text" id="form-linkedin" name="linkedin" placeholder="Ej: linkedin.com/in/sally-hill"/>
         </div>
         <div class="form__fill-input">
           <label for="form-github" class="form-label">Github</label>
-          <input type="tel" class="form-text" id="form-github" name="github"/>
+          <input type="tel" class="form-text" id="form-github" name="github" placeholder="Ej: @sally-hill"/>
         </div>
     </div>
+</fieldset>
   </form>
   <div class="submit-share collapsable">
       <h4 class="submit-share form-title title-3">Comparte</h4>
