@@ -6,6 +6,7 @@
   align-items: center;
 
   &__card {
+    margin-top: 20px;
     background-color: $white;
     padding-top:21px;
 
@@ -25,6 +26,29 @@
   &__career {
     @include Cards-Card-Career;
     margin:0;
+  }
+
+  &__image {
+    background-image:cover;
+    background-repeat:no-repeat;
+  }
+
+  &__links {
+    display:flex;
+    justify-content: flex-start;
+    padding:10px 20px 12px;
+    margin:0;
+  }
+
+  &__link-image {
+    width: 32px;
+    height:32px;
+    border:2px solid $hospital-green;
+    border-radius: 50%;
+    margin-right:10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
