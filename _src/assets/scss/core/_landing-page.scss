@@ -1,0 +1,75 @@
+.landing__main {
+  background-color: $grey-landing;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.landing__main-title {
+  @include Landing-Tiltle-mobile;
+  margin-top: 35.4px;
+  margin-bottom: 0;
+}
+
+.landing__main-text {
+  @include Landing-text-mobile;
+  margin-top: 0;
+  margin-bottom: 17.8px;
+}
+
+.landing__main-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 268px;
+  height: 73.8px;
+  border: solid 1.6px $dull-orange;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.landing__main-description {
+  @include Landing-listText-mobile;
+  margin: 0;
+}
+
+/* .landing__main-start {
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 129px;
+  height: 42px;
+  border-radius: 21px;
+  background-color: $dirty-blue;
+  border: none;
+  text-align: center;
+  @include Landing-StartText;
+} */
+
+.landing__main-startButton {
+  width: 129px;
+  height: 42px;
+  border-radius: 21px;
+  background-color: $dirty-blue;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 38.6px;
+  margin-bottom: 30px;
+
+  .landing__main-start {
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 129px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include Landing-StartText;
+
+  }
+}
+
