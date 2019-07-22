@@ -1,6 +1,6 @@
 .section1 {
   padding:38px 35px 40px 45px;
-  background-color:$silver;
+  background-image:linear-gradient($silver, $pale-grey);
   display:flex;
   justify-content:center;
   align-items: center;
@@ -29,8 +29,15 @@
   }
 
   &__image {
-    background-image:cover;
+    background-size:cover;
     background-repeat:no-repeat;
+    background-position: center;
+    height: 240px;
+
+    img {
+      height:1px;
+      width:1px;
+    }
   }
 
   &__links {
@@ -40,7 +47,7 @@
     margin:0;
   }
 
-  &__link-image {
+  &__link {
     width: 32px;
     height:32px;
     border:2px solid $hospital-green;
@@ -49,8 +56,11 @@
     display:flex;
     justify-content: center;
     align-items: center;
+
+    &__image {
+      color:$dark-green-blue;
+    }
   }
 }
-
 
 
