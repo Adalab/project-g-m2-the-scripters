@@ -1,4 +1,19 @@
-.palette__row{
+body{
+  margin:0;
+  padding: 0;
+}
+.wrapper{
+  margin: 0 20px;
+}
+
+.theme{
+  margin: 0 0 20px;
+  &:last-child{
+    margin:0 0;
+  }
+}
+
+.theme__row{
   display: flex;
   align-items: center;
 }
@@ -15,4 +30,157 @@
   height: 1px;
   padding-top: 24px;
   overflow: hidden;
+}
+
+.form-title{
+  @include Cards-Form-Title;
+  border-top: 1px solid $grey-borders;
+  box-sizing: border-box;
+  padding: 10px 16px 10px 31px;
+  margin: 0;
+  position: relative;
+}
+.form__design-title{
+  border-top: 1px solid transparent;
+}
+.design-container{
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0 20px;
+}
+.theme-container{
+  display: flex;
+  flex-direction: column;
+}
+.form-colors-text{
+@include Cards-Form-ColorsText;
+margin: 0;
+}
+.fill-container{
+  margin: 1px 0 0;
+}
+
+.form-label{
+  @include Cards-Form-Labels;
+  display: block;
+  margin: 0 0 7px;
+}
+.form-text{
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 30px;
+  border: solid 1px $hospital-green;
+  margin: 0 0 20px;
+  &:last-child{
+    margin: 0 0 30px;
+  }
+}
+
+.form-photo-preview{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: solid 1px $hospital-green;
+  margin: 0 0 20px 20px;
+}
+
+.submit-container{
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20px 0 30px;
+  border-bottom: 1px solid $grey-borders;
+}
+
+.share-container {
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20px 0 30px;
+  border-bottom: 1px solid $grey-borders;
+}
+.card-success {
+  @include Cards-Form-SuccessText;
+  margin: 0;
+
+}
+.share-link {
+  @include Cards-Form-Link;
+  margin: 5px 0 13px;
+  overflow: visible;
+}
+.title-1:before{
+  content: "";
+  left:0;
+  top: 13px;
+  position: absolute;
+  width: 21px;
+  height: 18px;
+  background-image: url("http://placehold.it/50x50");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.title-1:after{
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 13px;
+  width: 16px;
+  height: 18px;
+  background-color: blue;
+  // background-image: url("http://placehold.it/50x50");
+  // background-size: contain;
+  // background-repeat: no-repeat;
+}
+
+.title-2:before{
+  content: "";
+  left:0;
+  top: 13px;
+  position: absolute;
+  width: 21px;
+  height: 18px;
+  background-image: url("http://placehold.it/50x50");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.title-2:after{
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 13px;
+  width: 16px;
+  height: 18px;
+  background-color: blue;
+  // background-image: url("http://placehold.it/50x50");
+  // background-size: contain;
+  // background-repeat: no-repeat;
+}
+
+.title-3:before{
+  content: "";
+  left:0;
+  top: 13px;
+  position: absolute;
+  width: 21px;
+  height: 18px;
+  background-image: url("http://placehold.it/50x50");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.title-3:after{
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 13px;
+  width: 16px;
+  height: 18px;
+  background-color: blue;
+  // background-image: url("http://placehold.it/50x50");
+  // background-size: contain;
+  // background-repeat: no-repeat;
+}
+
+
+.hidden{
+  display: none;
 }

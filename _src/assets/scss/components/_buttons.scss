@@ -20,6 +20,7 @@
   }
 
 .button-addImage-mobile{
+  display: inline-block;
   width: 140px;
   height: 30px;
   border-radius: 3px;
@@ -27,10 +28,12 @@
   background-color: $dull-orange;
   border: none;
   text-align: center;
+  box-sizing: border-box;
+  vertical-align: top;
   @include Cards-Form-ImageButton;
 }
 
-.button-Create-before-mobile{
+.button-Create-before{
   width: 199px;
   height: 50px;
   border-radius: 12px;
@@ -41,7 +44,7 @@
   @include Cards-Form-CreateButton;
 }
 
-.button-Create-after-mobile{
+.button-Create-after{
   width: 199px;
   height: 50px;
   border-radius: 12px;
@@ -52,7 +55,7 @@
     @include Cards-Form-CreateButton;
   }
 
-.button-Twitter-mobile{
+.button-Twitter{
   width: 181px;
   height: 30px;
   border-radius: 3px;

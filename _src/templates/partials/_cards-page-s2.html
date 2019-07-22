@@ -1,80 +1,94 @@
 <section class="cards__section-2">
-  <form action="/signup" method="POST">
+  <div class="wrapper">
+  <form id="form" action="/signup" method="POST">
 <!-- <fieldset></fieldset> -->
 <!-- <legend>Elegir tema</legend> -->
     <div class="form__design collapsable">
-      <h4 class="form__design-title form-title">Diseña</h4>
+      <h4 class="form__design-title form-title title-1">Diseña</h4>
     </div>
-    <div class="form__design-content">
-      <h3 class="colors">Colores:</h3>
-      <div class="palette">
-        <label for="p1" class="paletter__row">
-          <input type="radio" class="plaette__radio" id="p1" name="palette">
-          <ul class="colors">
-            <li class="color" style="background-color: #114e4e">#830000</li>
-            <li class="color" style="background-color: #438792">#c0ffee</li>
-            <li class="color" style="background-color: #a2deaf">#fabada</li>
-          </ul>
-        </label>
-      </div>
-      <div class="palette">
-        <label for="p2" class="paletter__row">
-          <input type="radio" class="plaette__radio" id="p2" name="palette">
-          <ul class="colors">
-            <li class="color" style="background-color: #420101">#830000</li>
-            <li class="color" style="background-color: #bd1010">#c0ffee</li>
-            <li class="color" style="background-color: #e95626">#e95626</li>
-          </ul>
-        </label>
-      </div>
-      <div class="palette">
-        <label for="p2" class="paletter__row">
-          <input type="radio" class="plaette__radio" id="p2" name="palette">
-          <ul class="colors">
-            <li class="color" style="background-color: #3e5b65">#830000</li>
-            <li class="color" style="background-color: #eab052">#c0ffee</li>
-            <li class="color" style="background-color: #a0c0cf">#fabada</li>
-          </ul>
-        </label>
+    <div class="form__design-content design-container">
+      <h3 class="form-colors-text">Colores:</h3>
+      <div class="theme-container">
+        <div class="theme">
+            <label for="t1" class="theme__row">
+              <input type="radio" class="theme__radio" id="t1" name="theme">
+              <ul class="colors">
+                <li class="color" style="background-color:#114e4e">Eden</li>
+                <li class="color" style="background-color:#438792">Wedgewood</li>
+                <li class="color" style="background-color:#a2deaf">Celadon</li>
+              </ul>
+            </label>
+          </div>
+        <div class="theme">
+            <label for="t2" class="theme__row">
+                <input type="radio" class="theme__radio" id="t2" name="theme">
+                <ul class="colors">
+              <li class="color" style="background-color: #420101">Chocolate</li>
+              <li class="color" style="background-color: #bd1010">Thunderbird</li>
+              <li class="color" style="background-color: #e95626">Flamingo</li>
+            </ul>
+          </label>
+        </div>
+        <div class="theme">
+            <label for="t3" class="theme__row">
+                <input type="radio" class="theme__radio" id="t3" name="theme">
+                <ul class="colors">
+              <li class="color" style="background-color: #3e5b65">Fiord</li>
+              <li class="color" style="background-color: #eab052">Ronchi</li>
+              <li class="color" style="background-color: #a0c0cf">Rock Blue</li>
+            </ul>
+          </label>
+        </div>
       </div>
     </div>
 <!-- <fieldset></fieldset> -->
 <!-- <legend>Información personal:</legend> -->
-    <div class="form__design collapsable">
-      <h4 class="form__design-title form-title">Rellena</h4>
+    <div class="form__fill collapsable">
+      <h4 class="form__fill-title form-title title-2">Rellena</h4>
     </div>
-    <div class="form__design-content">
-        <div class="form__design-input">
+    <div class="form__fill-content fill-container">
+        <div class="form__fill-input">
           <label for="form-name" class="form-label">Nombre completo</label>
           <input type="text" class="form-text" id="form-name" name="name"/>
         </div>
-        <div class="form__design-input">
+        <div class="form__fill-input">
           <label for="form-career" class="form-label">Puesto</label>
-          <input type="text" class="form-text" id="form-career" name="career"/>
+          <input type="text" class="form-text" id="form-career" name="job"/>
         </div>
-        <div class="form__design-input">
+        <div class="form__fill-input">
           <label for="form-photo" class="form-label">Imagen de perfil</label>
-          <input type="file" class="form-text form-file" id="form-photo" name="career"/>
-          <button class="form-photo-button"></button>
+          <input type="file" class="form-text form-file hidden" id="form-photo" name="photo"/>
+          <button class="form-photo-button button-addImage-mobile">Añadir imagen</button>
           <div class="form-photo-preview"></div>
         </div>
-        <div class="form__design-input">
+        <div class="form__fill-input">
           <label for="form-email" class="form-label">Email</label>
           <input type="email" class="form-text" id="form-email" name="email"/>
         </div>
-        <div class="form__design-input">
+        <div class="form__fill-input">
           <label for="form-tel" class="form-label">Teléfono</label>
-          <input type="tel" class="form-text" id="form-tel" name="telephone"/>
+          <input type="tel" class="form-text" id="form-tel" name="phone"/>
         </div>
-        <div class="form__design-input">
+        <div class="form__fill-input">
           <label for="form-linkedin" class="form-label">Linkedin</label>
           <input type="tel" class="form-text" id="form-linkedin" name="linkedin"/>
         </div>
-        <div class="form__design-input">
+        <div class="form__fill-input">
           <label for="form-github" class="form-label">Github</label>
           <input type="tel" class="form-text" id="form-github" name="github"/>
         </div>
-
     </div>
   </form>
+  <div class="submit-share collapsable">
+      <h4 class="submit-share form-title title-3">Comparte</h4>
+    </div>
+    <div class="submit-container">
+      <button class="button-Create-before" type="submit" form="form">Crear tarjeta</button>
+    </div>
+    <div class="share-container">
+      <p class="card-success">La tarjeta ha sido creada:</p>
+      <p class="share-link">https://awesome-profile-card.com?id=A456DF0001</p>
+      <button class="button-Twitter" type="submit">Compartir en twitter</button>
+    </div>
+</div>
 </section>
