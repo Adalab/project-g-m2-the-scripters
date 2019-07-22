@@ -21,19 +21,23 @@
 .landing__main-list {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 15px 20px 10px;
   width: 268px;
   height: 73.8px;
   border: solid 1.6px $dull-orange;
   border-radius: 4px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
 .landing__main-description {
   @include Landing-listText-mobile;
   margin: 0;
+}
+
+.landing__main-image {
+  height: 26px;
 }
 
 /* .landing__main-start {
@@ -73,3 +77,26 @@
   }
 }
 
+/* MEDIA QUERY TABLET */
+
+@media all and (min-width: 768px){
+  .landing__main-title {
+  @include Landing-Tiltle-tablet;
+  margin-top: 31px;
+  }
+  .landing__main-text {
+    @include Landing-text-tablet;
+    margin-top: 0;
+    margin-bottom: 27px;
+  }
+  .landing__main-list {
+    width: 325px;
+    height: 86px;
+  }
+  .landing__main-description {
+    @include Landing-listText-tablet;
+  }
+  .landing__main-image {
+    height: 29px;
+  }
+}
