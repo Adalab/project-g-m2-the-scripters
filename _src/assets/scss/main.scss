@@ -3,4 +3,13 @@
 @import 'core/mixins';
 @import 'components/buttons';
 
+/* LANDING PARTIALS */
+@import 'core/landing-header';
+@import 'core/landing-page';
 
+/* CARDS PARTIALS */
+@import 'core/cards-header';
+@import 'core/cards-page';
+
+/* COMMON FOOTER */
+@import 'core/footer.scss';
