@@ -44,17 +44,16 @@
   @include Cards-Form-CreateButton;
   position: relative;
 }
-  .button-Create-before:before{
-    content: "";
-    left:17px;
-    top: 14px;
-    position: absolute;
-    width: 25px;
-    height: 22px;
-    background-image: url("http://placehold.it/50x50");
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
+.button-Create-before:before{
+  content: "\f2bb";
+  left:18px;
+  top: 16px;
+  position: absolute;
+  height: 22px;
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+  color: $white;
+}
 
 .button-Create-after{
   width: 199px;
@@ -69,37 +68,31 @@
   }
 
 .button-Create-after:before{
-  content: "";
+  content: "\f2bb";
   left:17px;
   top: 14px;
   position: absolute;
   width: 25px;
   height: 22px;
-  background-image: url("http://placehold.it/50x50");
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 .button-Twitter{
-  width: 181px;
-  height: 30px;
-  border-radius: 3px;
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
-  background-color: #00a0f5;
-  border: none;
-  position: relative;
-  padding: 0 9px 0 37px;
-    // text-align: center; -- como lleva icono no se
-    @include Cards-Form-TwitterButton;
-  }
-  .button-Twitter:before{
-    content: "";
-    left:11px;
-    top: 6px;
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    background-image: url("http://placehold.it/50x50");
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
+width: 181px;
+height: 30px;
+border-radius: 3px;
+box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+background-color: #00a0f5;
+border: none;
+position: relative;
+padding: 0 9px 0 36px;
+  // text-align: center; -- como lleva icono no se
+  @include Cards-Form-TwitterButton;
+}
+.button-Twitter:before{
+  content: "\f099";
+  left:13px;
+  top: 6px;
+  position: absolute;
+  height: 18px;
+  font-family: "Font Awesome 5 Brands";
+}

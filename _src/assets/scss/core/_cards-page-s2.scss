@@ -2,6 +2,7 @@ body{
   margin:0;
   padding: 0;
 }
+
 .wrapper{
   margin: 0 20px;
 
@@ -26,6 +27,7 @@ body{
   padding: 0;
   margin: 0;
 }
+
 .form__fielset-legend{
   height: 1px;
   width: 1px;
@@ -69,22 +71,27 @@ body{
   margin: 0;
   position: relative;
 }
+
 .form__design-title{
   border-top: 1px solid transparent;
 }
+
 .design-container{
   display: flex;
   justify-content: space-between;
   margin: 12px 0 20px;
 }
+
 .theme-container{
   display: flex;
   flex-direction: column;
 }
+
 .form-colors-text{
 @include Cards-Form-ColorsText;
 margin: 0;
 }
+
 .fill-container{
   margin: 1px 0 0;
 }
@@ -94,6 +101,7 @@ margin: 0;
   display: block;
   margin: 0 0 7px;
 }
+
 .form-text{
   display: block;
   box-sizing: border-box;
@@ -105,6 +113,7 @@ margin: 0;
     margin: 0 0 30px;
   }
 }
+
 .form-text:placeholder{
   @include Cards-Form-Placeholders;
 }
@@ -130,88 +139,87 @@ margin: 0;
   padding: 20px 0 30px;
   border-bottom: 1px solid $grey-borders;
 }
+
 .card-success {
   @include Cards-Form-SuccessText;
   margin: 0;
 
 }
+
 .share-link {
   @include Cards-Form-Link;
   margin: 5px 0 13px;
   overflow: visible;
 }
+
 .title-1:before{
-  content: "";
+  content: "\f248";
   left:0;
   top: 13px;
   position: absolute;
   width: 21px;
   height: 18px;
-  background-image: url("http://placehold.it/50x50");
-  background-size: contain;
-  background-repeat: no-repeat;
+  font-family: "Font Awesome 5 Pro";
+  color: $dull-orange;
+  font-weight: 400;
 }
+
 .title-1:after{
-  content: "";
+  content: "\f078";
   position: absolute;
   right: 0;
   top: 13px;
-  width: 16px;
   height: 18px;
-  background-color: blue;
-  // background-image: url("http://placehold.it/50x50");
-  // background-size: contain;
-  // background-repeat: no-repeat;
+  font-weight: 600;
+  font-family: "Font Awesome 5 Pro";
+  color: $dark-grey;
+
 }
 
 .title-2:before{
-  content: "";
+  content: "\f11c";
   left:0;
   top: 13px;
   position: absolute;
-  width: 21px;
   height: 18px;
-  background-image: url("http://placehold.it/50x50");
-  background-size: contain;
-  background-repeat: no-repeat;
+  font-family: "Font Awesome 5 Pro";
+  color: $dull-orange;
+  font-weight: 400;
 }
+
 .title-2:after{
-  content: "";
+  content: "\f078";
   position: absolute;
   right: 0;
   top: 13px;
-  width: 16px;
   height: 18px;
-  background-color: blue;
-  // background-image: url("http://placehold.it/50x50");
-  // background-size: contain;
-  // background-repeat: no-repeat;
+  font-weight: 600;
+  font-family: "Font Awesome 5 Pro";
+  color: $dark-grey;
 }
 
 .title-3:before{
-  content: "";
+  content: "\f1e0";
   left:0;
   top: 13px;
   position: absolute;
-  width: 21px;
   height: 18px;
-  background-image: url("http://placehold.it/50x50");
-  background-size: contain;
-  background-repeat: no-repeat;
+  font-family: "Font Awesome 5 Pro";
+  color: $dull-orange;
+  font-weight: 900;
 }
+
 .title-3:after{
-  content: "";
+  content: "\f078";
   position: absolute;
   right: 0;
   top: 13px;
   width: 16px;
   height: 18px;
-  background-color: blue;
-  // background-image: url("http://placehold.it/50x50");
-  // background-size: contain;
-  // background-repeat: no-repeat;
+  font-weight: 600;
+  font-family: "Font Awesome 5 Pro";
+  color: $dark-grey;
 }
-
 
 .hidden{
   display: none;
