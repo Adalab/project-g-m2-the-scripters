@@ -7,7 +7,7 @@
 }
 
 .landing__main-title {
-  @include Landing-Tiltle-mobile;
+  @include Landing-Title-mobile;
   margin-top: 35.4px;
   margin-bottom: 0;
 }
@@ -81,7 +81,7 @@
 
 @media all and (min-width: 768px){
   .landing__main-title {
-  @include Landing-Tiltle-tablet;
+  @include Landing-Title-tablet;
   margin-top: 31px;
   }
   .landing__main-text {
