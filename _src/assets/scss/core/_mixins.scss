@@ -109,6 +109,7 @@
   font-weight: $font-weight-medium;
   line-height: normal;
   color: $dark-grey;
+  text-transform: uppercase;
 }
 
 @mixin Cards-Form-ColorsText {
@@ -117,6 +118,7 @@
   font-weight: $font-weight-normal;
   line-height: normal;
   color: $dark-grey;
+  text-transform: uppercase;
 }
 
 @mixin Cards-Form-Labels {
@@ -149,6 +151,7 @@
   font-weight: $font-weight-medium;
   line-height: normal;
   color: $white;
+  text-transform: uppercase;
 }
 
 @mixin Cards-Form-SuccessText {
