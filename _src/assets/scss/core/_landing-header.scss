@@ -1,0 +1,17 @@
+.landing__header {
+  background-color: $grey-landing;
+  display: flex;
+  justify-content: center;
+  padding-top: 95px;
+}
+
+.landing__title {
+  background-image: url('assets/images/awesome-cards.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 94px;
+  height: 1px;
+  width: auto;
+  overflow: hidden;
+  margin:0;
+}
