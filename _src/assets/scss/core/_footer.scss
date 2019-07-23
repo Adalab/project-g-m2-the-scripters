@@ -1,0 +1,18 @@
+.footer__container{
+    text-align: center;
+
+    @media all and (min-width:678px){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 41px;
+    }
+}
+
+.footer__copyright{
+    @include Footer-Copy;
+}
+
+.footer__logo{
+    background-image: url("../assets/images/logo-adalab.png");
+}
