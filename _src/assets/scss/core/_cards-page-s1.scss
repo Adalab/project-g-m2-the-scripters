@@ -1,0 +1,66 @@
+.section1 {
+  padding:38px 35px 40px 45px;
+  background-image:linear-gradient($silver, $pale-grey);
+  display:flex;
+  justify-content:center;
+  align-items: center;
+
+  &__card {
+    margin-top: 20px;
+    background-color: $white;
+    padding-top:21px;
+
+    &__title {
+      padding-left:15px;
+      padding-right:20px;
+      border-left: 5px solid $dark-green-blue;
+      margin-bottom:10px;
+    }
+  }
+
+  &__name {
+    @include Cards-Card-Name;
+    margin:0 0 4px;
+  }
+
+  &__career {
+    @include Cards-Card-Career;
+    margin:0;
+  }
+
+  &__image {
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    height: 240px;
+
+    img {
+      height:1px;
+      width:1px;
+    }
+  }
+
+  &__links {
+    display:flex;
+    justify-content: flex-start;
+    padding:10px 20px 12px;
+    margin:0;
+  }
+
+  &__link {
+    width: 32px;
+    height:32px;
+    border:2px solid $hospital-green;
+    border-radius: 50%;
+    margin-right:10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    &__image {
+      color:$dark-green-blue;
+    }
+  }
+}
+
+
