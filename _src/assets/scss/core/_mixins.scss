@@ -1,5 +1,5 @@
 // FONTS MIXINS LANDING - MAIN - MOBILE
-@mixin Landing-Tiltle-mobile {
+@mixin Landing-Title-mobile {
   font-family: $font-family-Merri;
   font-size: 19.2px;
   font-weight: $font-weight-black;
@@ -32,7 +32,7 @@
 }
 
 // FONTS MIXINS LANDING - MAIN - TABLET
-@mixin Landing-Tiltle-tablet {
+@mixin Landing-Title-tablet {
   font-family: $font-family-Merri;
   font-size: 24px;
   font-weight: $font-weight-black;
