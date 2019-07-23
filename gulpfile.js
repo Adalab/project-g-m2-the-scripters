@@ -173,7 +173,6 @@ gulp.task('default', gulp.series(['clean','html', 'styles','scripts', 'images', 
   browserSync.init({
     server : {
       baseDir: './public/',
-      index: "landing.html"
     }
   });
   gulp.watch(config.watch.html, gulp.series(['html', 'bs-reload']));
