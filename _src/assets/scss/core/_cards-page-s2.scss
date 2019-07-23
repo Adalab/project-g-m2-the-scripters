@@ -136,15 +136,15 @@ margin: 0;
   overflow: visible;
 }
 .title-1:before{
-  content: "";
+  content: "\f248";
   left:0;
   top: 13px;
   position: absolute;
   width: 21px;
   height: 18px;
-  background-image: url("http://placehold.it/50x50");
-  background-size: contain;
-  background-repeat: no-repeat;
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+  color: $dull-orange;
 }
 .title-1:after{
   content: "";
