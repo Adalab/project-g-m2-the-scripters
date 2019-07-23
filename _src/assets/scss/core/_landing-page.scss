@@ -40,6 +40,13 @@
   height: 26px;
 }
 
+.list-fill:before{
+  content: "\f11c";
+}
+.list-fill:after{
+  content: "\f078";
+}
+
 /* .landing__main-start {
   text-decoration: none;
   text-transform: uppercase;
