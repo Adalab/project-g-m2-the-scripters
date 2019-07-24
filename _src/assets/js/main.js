@@ -31,6 +31,7 @@ function openCollapsable3 (event) {
 function openCollapsable4 (event) {
   event.preventDefault ();
   collapseShare.classList.toggle ('hidden');
+  clickShare.classList.add('button-Create-after');
 }
 
 //Listeners
