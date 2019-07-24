@@ -2,7 +2,6 @@
 
 console.log('>> Ready :)');
 
-
 //Crear constante con las etiquetas de HTML
 const clickDesign = document.querySelector('.design-collapsable');
 const clickFill = document.querySelector('.fill-collapsable');
@@ -18,6 +17,23 @@ const collapseShare = document.querySelector('.share-container');
 
 
 //FUNCIÓN
+const openCollapsable = () => {
+  collapseDesign.classList.toggle ('hidden');
+}
+const openCollapsable2 = () => {
+  collapseFill.classList.toggle ('hidden');
+}
+const openCollapsable3 = () => {
+  collapseSubmit.classList.toggle ('hidden');
+}
+
+const openCollapsable4 = () => {
+  event.preventDefault ();
+  collapseShare.classList.toggle ('hidden');
+  clickShare.classList.add('button-Create-after');
+}
+
+/*
 function openCollapsable (event) {
   collapseDesign.classList.toggle ('hidden');
 }
@@ -32,7 +48,7 @@ function openCollapsable4 (event) {
   event.preventDefault ();
   collapseShare.classList.toggle ('hidden');
   clickShare.classList.add('button-Create-after');
-}
+}*/
 
 //Listeners
 clickDesign.addEventListener('click', openCollapsable);
