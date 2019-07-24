@@ -1,12 +1,11 @@
 .cards__header{
-
+    background-image: url("../../assets/images/logo.svg");
+    background-repeat: no-repeat; 
+    background-size: contain;  
+    
 }
 
 .cards__title{
-    background-image: url("../assets/images/logo.svg");
-    /* background-color: red; */
-    background-position: left top;
-    background-repeat: no-repeat;
     height: 1px;
     overflow: hidden;
     margin: 0;
