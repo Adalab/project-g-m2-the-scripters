@@ -1,9 +1,14 @@
 .section1 {
-  padding:38px 35px 40px 45px;
+  padding:40px;
   background-image:linear-gradient($silver, $pale-grey);
   display:flex;
   justify-content:center;
   align-items: center;
+
+  @media all and (min-width:768px) {
+    grid-column:2/3;
+    grid-row-start:1;
+  }
 
   &__card {
     margin-top: 20px;
@@ -62,5 +67,6 @@
     }
   }
 }
+
 
 

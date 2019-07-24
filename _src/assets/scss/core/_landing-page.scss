@@ -29,6 +29,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .landing__main-description {
@@ -36,21 +37,41 @@
   margin: 0;
 }
 
-.landing__main-image {
+.list-design:before{
+  content: "\f248";
+  left:5px;
+  top: 5px;
+  position: absolute;
+  width: 32px;
   height: 26px;
+  font-family: "Font Awesome 5 Pro";
+  color: $dull-orange;
+  font-weight: 400;
 }
 
-/* .landing__main-start {
-  text-decoration: none;
-  text-transform: uppercase;
-  width: 129px;
-  height: 42px;
-  border-radius: 21px;
-  background-color: $dirty-blue;
-  border: none;
-  text-align: center;
-  @include Landing-StartText;
-} */
+.list-fill:before{
+  content: "\f11c";
+  left:0;
+  top: 13px;
+  position: absolute;
+  width: 32px;
+  height: 26px;
+  font-family: "Font Awesome 5 Pro";
+  color: $dull-orange;
+  font-weight: 400;
+}
+
+.list-share:before{
+  content: "\f1e0";
+  left:0;
+  top: 13px;
+  position: absolute;
+  width: 32px;
+  height: 26px;
+  font-family: "Font Awesome 5 Pro";
+  color: $dull-orange;
+  font-weight: 900;
+}
 
 .landing__main-startButton {
   width: 129px;
@@ -63,18 +84,16 @@
   align-items: center;
   margin-top: 38.6px;
   margin-bottom: 30px;
-
-  .landing__main-start {
-    text-decoration: none;
-    text-transform: uppercase;
-    width: 129px;
-    height: 42px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @include Landing-StartText;
-
-  }
+    .landing__main-start {
+      text-decoration: none;
+      text-transform: uppercase;
+      width: 129px;
+      height: 42px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include Landing-StartText;
+    }
 }
 
 /* MEDIA QUERY TABLET */
