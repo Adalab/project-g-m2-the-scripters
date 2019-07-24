@@ -4,7 +4,7 @@
 .cards__container {
   @media all and (min-width:768px) {
     display:grid;
-    grid-template-columns: 400px 1fr;
+    grid-template-columns: 369px 1fr;
     background-image:linear-gradient($grey-landing, $white);
     padding:20px 40px;
   }
