@@ -3,10 +3,10 @@
     <form id="form" action="/signup" method="POST">
       <fieldset class="form__fieldset">
         <legend class="form__fielset-legend">Elegir tema</legend>
-        <div class="form__design collapsable">
+        <div class="form__design design-collapsable">
           <h4 class="form__design-title form-title title-1">Diseña</h4>
         </div>
-        <div class="form__design-content design-container">
+        <div class="form__design-content design-container collapsable">
           <h3 class="form-colors-text">Colores:</h3>
           <div class="theme-container">
             <div class="theme">
@@ -58,10 +58,10 @@
       </fieldset>
       <fieldset class="form__fieldset">
         <legend class="form__fielset-legend">Completar información</legend>
-        <div class="form__fill collapsable">
+        <div class="form__fill fill-collapsable">
           <h4 class="form__fill-title form-title title-2">Rellena</h4>
         </div>
-        <div class="form__fill-content fill-container">
+        <div class="form__fill-content fill-container collapsable">
           <div class="form__fill-input">
             <label for="form-name" class="form-label">Nombre completo</label>
             <input
@@ -138,15 +138,15 @@
         </div>
       </fieldset>
     </form>
-    <div class="submit-share collapsable">
+    <div class="submit-share submit-collapsable">
       <h4 class="submit-share form-title title-3">Comparte</h4>
     </div>
-    <div class="submit-container">
-      <button class="button-Create-before" type="submit" form="form">
+    <div class="submit-container collapsable">
+      <button class="button-Create-before collapsebtn" type="submit" form="form">
         Crear tarjeta
       </button>
     </div>
-    <div class="share-container">
+    <div class="share-container hidden">
       <p class="card-success">La tarjeta ha sido creada:</p>
       <p class="share-link">https://awesome-profile-card.com?id=A456DF0001</p>
       <button class="button-Twitter" type="submit">Compartir en twitter</button>
