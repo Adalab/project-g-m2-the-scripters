@@ -19,12 +19,18 @@ const collapseShare = document.querySelector('.share-container');
 //FUNCIÓN
 const openCollapsable = () => {
   collapseDesign.classList.toggle ('hidden');
+  collapseFill.classList.add ('hidden');
+  collapseSubmit.classList.add('hidden')
 }
 const openCollapsable2 = () => {
+  collapseDesign.classList.add ('hidden');
   collapseFill.classList.toggle ('hidden');
+  collapseSubmit.classList.add ('hidden')
 }
 const openCollapsable3 = () => {
-  collapseSubmit.classList.toggle ('hidden');
+  collapseDesign.classList.add ('hidden');
+  collapseFill.classList.add ('hidden');
+  collapseSubmit.classList.toggle ('hidden')
 }
 
 const openCollapsable4 = () => {
