@@ -16,12 +16,13 @@
   @include Landing-text-mobile;
   margin-top: 0;
   margin-bottom: 17.8px;
+  width: 265px;
 }
 
 .landing__main-list {
   list-style: none;
   margin: 0;
-  padding: 15px 20px 10px;
+  padding: 0 20px;
   width: 268px;
   height: 73.8px;
   border: solid 1.6px rgba(225, 115, 52, 0.24);
@@ -31,49 +32,30 @@
   align-items: center;
 }
 
-.landing__main-item1 {
-  position: relative;
+.landing__list-iconDesign {
+  height: 26px;
+  font-family: "Font Awesome 5 Pro";
+  color: $dull-orange;
+  font-weight: $font-weight-normal;
+}
+
+.landing__list-iconFill {
+  height: 26px;
+  font-family: "Font Awesome 5 Pro";
+  color: $dull-orange;
+  font-weight: $font-weight-normal;
+}
+
+.landing__list-iconShare {
+  height: 26px;
+  font-family: "Font Awesome 5 Pro";
+  color: $dull-orange;
+  font-weight: $font-weight-black;
 }
 
 .landing__main-description {
   @include Landing-listText-mobile;
   margin: 0;
-}
-
-.list-design:before{
-  content: "\f248";
-  left:5px;
-  top: 5px;
-  position: absolute;
-  width: 32px;
-  height: 26px;
-  font-family: "Font Awesome 5 Pro";
-  color: $dull-orange;
-  font-weight: 400;
-}
-
-.list-fill:before{
-  content: "\f11c";
-  left:0;
-  top: 13px;
-  position: absolute;
-  width: 32px;
-  height: 26px;
-  font-family: "Font Awesome 5 Pro";
-  color: $dull-orange;
-  font-weight: 400;
-}
-
-.list-share:before{
-  content: "\f1e0";
-  left:0;
-  top: 13px;
-  position: absolute;
-  width: 32px;
-  height: 26px;
-  font-family: "Font Awesome 5 Pro";
-  color: $dull-orange;
-  font-weight: 900;
 }
 
 .landing__main-startButton {
@@ -102,23 +84,42 @@
 /* MEDIA QUERY TABLET */
 
 @media all and (min-width: 768px){
+
   .landing__main-title {
-  @include Landing-Title-tablet;
-  margin-top: 31px;
+    @include Landing-Title-tablet;
+    margin-top: 31px;
   }
+
   .landing__main-text {
     @include Landing-text-tablet;
+    width: 331px;
     margin-top: 0;
     margin-bottom: 27px;
   }
+
   .landing__main-list {
     width: 325px;
     height: 86px;
   }
+
+  .landing__list-iconDesign {
+    height: 29px;
+  }
+
+  .landing__list-iconFill {
+    height: 29px;
+  }
+
+  .landing__list-iconShare {
+    height: 29px;
+  }
+
   .landing__main-description {
     @include Landing-listText-tablet;
   }
+
   .landing__main-image {
     height: 29px;
   }
+
 }
