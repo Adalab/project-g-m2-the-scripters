@@ -20,24 +20,24 @@ const collapseShare = document.querySelector('.share-container');
 
 //FUNCIÓN
 const openCollapsable = () => {
-  collapseDesign.classList.toggle ('hidden');
-  collapseFill.classList.add ('hidden');
+  collapseDesign.classList.toggle('hidden');
+  collapseFill.classList.add('hidden');
   collapseSubmit.classList.add('hidden')
 }
 const openCollapsable2 = () => {
-  collapseDesign.classList.add ('hidden');
-  collapseFill.classList.toggle ('hidden');
-  collapseSubmit.classList.add ('hidden')
+  collapseDesign.classList.add('hidden');
+  collapseFill.classList.toggle('hidden');
+  collapseSubmit.classList.add('hidden')
 }
 const openCollapsable3 = () => {
-  collapseDesign.classList.add ('hidden');
-  collapseFill.classList.add ('hidden');
-  collapseSubmit.classList.toggle ('hidden')
+  collapseDesign.classList.add('hidden');
+  collapseFill.classList.add('hidden');
+  collapseSubmit.classList.toggle('hidden')
 }
 
 const openCollapsable4 = () => {
-  event.preventDefault ();
-  collapseShare.classList.toggle ('hidden');
+  event.preventDefault();
+  collapseShare.classList.toggle('hidden');
   clickShare.classList.add('button-Create-after');
 }
 
@@ -58,11 +58,11 @@ const clickTheme3 = document.querySelector('.theme__radio3');
 
 const card = document.querySelector('.section1__card');
 
-function changeColorTheme (event) {
+function changeColorTheme(event) {
   console.log(event.currentTarget.value)
-  card.classList.remove ('theme-colors1');
-  card.classList.remove ('theme-colors2');
-  card.classList.remove ('theme-colors3');
+  card.classList.remove('theme-colors1');
+  card.classList.remove('theme-colors2');
+  card.classList.remove('theme-colors3');
 
   card.classList.add(event.currentTarget.value);
 }
@@ -74,22 +74,31 @@ clickTheme3.addEventListener('click', changeColorTheme);
 //FUNCION DE ESCRIBIR
 
 const changeTitle = document.querySelector('.js__form-name');
-const writeTitle =
-document.querySelector('.js__title');
+const writeTitle = document.querySelector('.js__title');
 
-function changeName (){
+
+function changeName() {
   const inputValue = changeTitle.value;
-  writeTitle.innerHTML= inputValue;
+  if (changeTitle.value === '') {
+    writeTitle.innerHTML = 'Nombre Apellido';
+  } else {
+    writeTitle.innerHTML = inputValue;
+  }
+
 }
-changeTitle.addEventListener ('keyup', changeName);
+changeTitle.addEventListener('keyup', changeName);
 
 
-const Job = document.querySelector ('.js__form-job');
+const Job = document.querySelector('.js__form-job');
 const writeJob = document.querySelector('.js__job');
 
-function changeJob (){
+function changeJob() {
   const inputValue = Job.value;
-  writeJob.innerHTML= inputValue;
+  if (Job.value === '') {
+    writeJob.innerHTML = 'Front-end developer';
+  } else {
+    writeJob.innerHTML = inputValue;
+  }
 }
 
-Job.addEventListener ('keyup', changeJob );
+Job.addEventListener('keyup', changeJob);
