@@ -2,6 +2,8 @@
 
 console.log('>> Ready :)');
 
+//FUNCIONES COLLAPSABLES
+
 //Crear constante con las etiquetas de HTML
 const clickDesign = document.querySelector('.design-collapsable');
 const clickFill = document.querySelector('.fill-collapsable');
@@ -39,23 +41,6 @@ const openCollapsable4 = () => {
   clickShare.classList.add('button-Create-after');
 }
 
-/*
-function openCollapsable (event) {
-  collapseDesign.classList.toggle ('hidden');
-}
-function openCollapsable2 (event) {
-  collapseFill.classList.toggle ('hidden');
-}
-function openCollapsable3 (event) {
-  collapseSubmit.classList.toggle ('hidden');
-}
-
-function openCollapsable4 (event) {
-  event.preventDefault ();
-  collapseShare.classList.toggle ('hidden');
-  clickShare.classList.add('button-Create-after');
-}*/
-
 //Listeners
 clickDesign.addEventListener('click', openCollapsable);
 clickFill.addEventListener('click', openCollapsable2);
@@ -63,38 +48,25 @@ clickSubmit.addEventListener('click', openCollapsable3);
 
 clickShare.addEventListener('click', openCollapsable4);
 
+
+
+//FUNCIONES COLORES
+
 const clickTheme1 = document.querySelector('.theme__radio1');
 const clickTheme2 = document.querySelector('.theme__radio2');
 const clickTheme3 = document.querySelector('.theme__radio3');
 
-//FUNCIONES COLORES
-
 const card = document.querySelector('.section1__card');
 
-function changeColor1 () {
-    card.classList.remove ('theme-colors1');
-    card.classList.remove ('theme-colors2');
-    card.classList.remove ('theme-colors3');
-
-    card.classList.add ('theme-colors1');
-}
-
-function changeColor2 () {
+function changeColorTheme (event) {
+  console.log(event.currentTarget.value)
   card.classList.remove ('theme-colors1');
   card.classList.remove ('theme-colors2');
   card.classList.remove ('theme-colors3');
 
-  card.classList.add ('theme-colors2');
+  card.classList.add(event.currentTarget.value);
 }
 
-function changeColor3 () {
-  card.classList.remove ('theme-colors1');
-  card.classList.remove ('theme-colors2');
-  card.classList.remove ('theme-colors3');
-
-  card.classList.add ('theme-colors3');
-}
-
-clickTheme1.addEventListener('click', changeColor1);
-clickTheme2.addEventListener('click', changeColor2);
-clickTheme3.addEventListener('click', changeColor3);
+clickTheme1.addEventListener('click', changeColorTheme);
+clickTheme2.addEventListener('click', changeColorTheme);
+clickTheme3.addEventListener('click', changeColorTheme);
