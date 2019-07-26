@@ -70,3 +70,23 @@ function changeColorTheme (event) {
 clickTheme1.addEventListener('click', changeColorTheme);
 clickTheme2.addEventListener('click', changeColorTheme);
 clickTheme3.addEventListener('click', changeColorTheme);
+
+//FUNCION DE ESCRIBIR
+
+const changeTitle = document.querySelector('.js__form');
+const writeTitle =
+document.querySelector('.js__title');
+
+
+function changeName (){
+  const inputValue = changeTitle.value;
+  writeTitle.innerHTML= inputValue;
+}
+
+
+
+
+
+
+changeTitle.addEventListener ('keyup', changeName );
+
