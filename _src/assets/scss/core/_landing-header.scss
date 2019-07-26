@@ -1,3 +1,9 @@
+
+.landing__container {
+  flex-grow: 1;
+
+}
+
 .landing__header {
   background-color: $grey-landing;
   display: flex;
@@ -16,4 +22,10 @@
 
   overflow: hidden;
   margin:0;
+}
+
+@media all and (min-width: 768px) {
+  .landing__container{
+    flex-grow: 1;
+  }
 }
