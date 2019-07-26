@@ -73,20 +73,23 @@ clickTheme3.addEventListener('click', changeColorTheme);
 
 //FUNCION DE ESCRIBIR
 
-const changeTitle = document.querySelector('.js__form');
+const changeTitle = document.querySelector('.js__form-name');
 const writeTitle =
 document.querySelector('.js__title');
-
 
 function changeName (){
   const inputValue = changeTitle.value;
   writeTitle.innerHTML= inputValue;
 }
+changeTitle.addEventListener ('keyup', changeName);
 
 
+const Job = document.querySelector ('.js__form-job');
+const writeJob = document.querySelector('.js__job');
 
+function changeJob (){
+  const inputValue = Job.value;
+  writeJob.innerHTML= inputValue;
+}
 
-
-
-changeTitle.addEventListener ('keyup', changeName );
-
+Job.addEventListener ('keyup', changeJob );
