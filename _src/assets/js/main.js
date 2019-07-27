@@ -19,23 +19,17 @@ const collapseShare = document.querySelector('.share-container');
 
 
 //FUNCIÓN
-const openCollapsable = () => {
-  collapseDesign.classList.toggle ('hidden');
-  collapseFill.classList.add ('hidden');
-  collapseSubmit.classList.add('hidden')
-  clickDesign.classList.toggle('js__collapsable1');
+const openCollapsable = (event) => {
+  const collapsable = event.currentTarget.parentElement;
+  collapsable.classList.toggle('js__collapsable1');
 }
-const openCollapsable2 = () => {
-  collapseDesign.classList.add ('hidden');
-  collapseFill.classList.toggle ('hidden');
-  collapseSubmit.classList.add ('hidden');
-  clickFill.classList.toggle('js__collapsable2');
+const openCollapsable2 = (event) => {
+  const collapsable = event.currentTarget.parentElement;
+  collapsable.classList.toggle('js__collapsable2');
 }
-const openCollapsable3 = () => {
-  collapseDesign.classList.add ('hidden');
-  collapseFill.classList.add ('hidden');
-  collapseSubmit.classList.toggle ('hidden');
-  clickSubmit.classList.toggle('js__collapsable3');
+const openCollapsable3 = (event) => {
+  const collapsable = event.currentTarget.parentElement;
+  collapsable.classList.toggle('js__collapsable3');
 }
 
 const openCollapsable4 = () => {

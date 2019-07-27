@@ -1,19 +1,28 @@
 .js__collapsable1 {
 
-  .title-1::after {
-    transform: rotate(180deg);
+  .title-1::after{
+    transform: none;
+  }
+  .design-container{
+    display: none;
   }
 }
 
-.js__collapsable2 {
+.js__collapsable2{
   .title-2::after{
-    transform: rotate(180deg);
+    transform: none;
+  }
+  .fill-container{
+    display: none;
   }
 }
 
-.js__collapsable3 {
+.js__collapsable3{
   .title-3::after{
-    transform: rotate(180deg);
+    transform: none;
+  }
+  .submit-container{
+    display: none;
   }
 }
 

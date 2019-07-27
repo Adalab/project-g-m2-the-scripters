@@ -3,7 +3,7 @@
     <form id="form" action="/signup" method="POST">
       <fieldset class="form__fieldset">
         <legend class="form__fielset-legend">Elegir tema</legend>
-        <div class="form__design design-collapsable js__collapsable1">
+        <div class="form__design design-collapsable">
           <h4 class="form__design-title form-title title-1">Diseña</h4>
         </div>
         <div class="form__design-content design-container collapsable ">
@@ -11,7 +11,13 @@
           <div class="theme-container">
             <div class="theme">
               <label for="t1" class="theme__row">
-                <input type="radio" class="theme__radio theme__radio1" id="t1" name="theme" value="theme-colors1"/>
+                <input
+                  type="radio"
+                  class="theme__radio theme__radio1"
+                  id="t1"
+                  name="theme"
+                  value="theme-colors1"
+                />
                 <ul class="colors">
                   <li class="color" style="background-color:#114e4e">Eden</li>
                   <li class="color" style="background-color:#438792">
@@ -25,7 +31,13 @@
             </div>
             <div class="theme">
               <label for="t2" class="theme__row">
-                <input type="radio" class="theme__radio theme__radio2" id="t2" name="theme"  value="theme-colors2"/>
+                <input
+                  type="radio"
+                  class="theme__radio theme__radio2"
+                  id="t2"
+                  name="theme"
+                  value="theme-colors2"
+                />
                 <ul class="colors">
                   <li class="color" style="background-color: #420101">
                     Chocolate
@@ -41,7 +53,13 @@
             </div>
             <div class="theme">
               <label for="t3" class="theme__row">
-                <input type="radio" class="theme__radio theme__radio3" id="t3" name="theme"  value="theme-colors3"/>
+                <input
+                  type="radio"
+                  class="theme__radio theme__radio3"
+                  id="t3"
+                  name="theme"
+                  value="theme-colors3"
+                />
                 <ul class="colors">
                   <li class="color" style="background-color: #3e5b65">Fiord</li>
                   <li class="color" style="background-color: #eab052">
@@ -56,12 +74,12 @@
           </div>
         </div>
       </fieldset>
-      <fieldset class="form__fieldset">
+      <fieldset class="form__fieldset js__collapsable2">
         <legend class="form__fielset-legend">Completar información</legend>
         <div class="form__fill fill-collapsable">
           <h4 class="form__fill-title form-title title-2">Rellena</h4>
         </div>
-        <div class="form__fill-content fill-container collapsable hidden">
+        <div class="form__fill-content fill-container collapsable">
           <div class="form__fill-input">
             <label for="form-name" class="form-label">Nombre completo</label>
             <input
@@ -138,13 +156,19 @@
         </div>
       </fieldset>
     </form>
-    <div class="submit-share submit-collapsable">
-      <h4 class="submit-share form-title title-3">Comparte</h4>
-    </div>
-    <div class="submit-container collapsable hidden">
-      <button class="button-Create-before collapsebtn" type="submit" form="form">
-        Crear tarjeta
-      </button>
+    <div class="js__group js__collapsable3">
+      <div class="submit-share submit-collapsable">
+        <h4 class="submit-share form-title title-3">Comparte</h4>
+      </div>
+      <div class="submit-container collapsable">
+        <button
+          class="button-Create-before collapsebtn"
+          type="submit"
+          form="form"
+        >
+          Crear tarjeta
+        </button>
+      </div>
     </div>
     <div class="share-container hidden">
       <p class="card-success">La tarjeta ha sido creada:</p>
