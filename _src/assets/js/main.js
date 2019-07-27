@@ -114,9 +114,12 @@ resetButton.addEventListener('click', resetCard);
 
 const changeMail = document.querySelector('.js__form-mail');
 const writeMail = document.querySelector('.js__icon-mail');
+const changePhone = document.querySelector('.js__form-phone');
+const writePhone = document.querySelector('.js__icon-phone');
 
 function writeIcons (event) {
   const inputValue = event.currentTarget.value;
+
   if (event.currentTarget.classList.contains('js__form-mail'));
   writeMail.href ='mailto: ' + inputValue;
     if (inputValue === '') {
@@ -124,6 +127,16 @@ function writeIcons (event) {
     } else {
       writeMail.classList.remove('hidden');
     }
+
+  if (event.currentTarget.classList.contains('js__form-phone'));
+  writePhone.href ='tel: ' + inputValue;
+    if (inputValue === '') {
+      writePhone.classList.add('hidden');
+    } else {
+      writePhone.classList.remove('hidden');
+    }
+
 }
 
 changeMail.addEventListener('keyup', writeIcons);
+changePhone.addEventListener('keyup', writeIcons);
