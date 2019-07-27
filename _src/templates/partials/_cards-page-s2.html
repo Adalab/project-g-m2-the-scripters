@@ -1,12 +1,12 @@
 <section class="cards__section-2">
   <div class="wrapper">
     <form id="form" action="/signup" method="POST">
-      <fieldset class="form__fieldset js__parent1">
+      <fieldset class="form__fieldset">
         <legend class="form__fielset-legend">Elegir tema</legend>
-        <div class="form__design design-collapsable">
+        <div class="form__design js__collapsable">
           <h4 class="form__design-title form-title title-1">Diseña</h4>
         </div>
-        <div class="form__design-content design-container collapsable ">
+        <div class="form__design-content design-container collapsable-container">
           <h3 class="form-colors-text">Colores:</h3>
           <div class="theme-container">
             <div class="theme">
@@ -16,7 +16,8 @@
                   class="theme__radio theme__radio1"
                   id="t1"
                   name="theme"
-                  value="theme-colors1"
+                  value="1"
+                  checked
                 />
                 <ul class="colors">
                   <li class="color" style="background-color:#114e4e">Eden</li>
@@ -36,7 +37,7 @@
                   class="theme__radio theme__radio2"
                   id="t2"
                   name="theme"
-                  value="theme-colors2"
+                  value="2"
                 />
                 <ul class="colors">
                   <li class="color" style="background-color: #420101">
@@ -58,7 +59,7 @@
                   class="theme__radio theme__radio3"
                   id="t3"
                   name="theme"
-                  value="theme-colors3"
+                  value="3"
                 />
                 <ul class="colors">
                   <li class="color" style="background-color: #3e5b65">Fiord</li>
@@ -74,12 +75,12 @@
           </div>
         </div>
       </fieldset>
-      <fieldset class="form__fieldset js__parent2 js__collapsable2">
+      <fieldset class="form__fieldset collapsed">
         <legend class="form__fielset-legend">Completar información</legend>
-        <div class="form__fill fill-collapsable">
+        <div class="form__fill js__collapsable">
           <h4 class="form__fill-title form-title title-2">Rellena</h4>
         </div>
-        <div class="form__fill-content fill-container collapsable">
+        <div class="form__fill-content fill-container collapsable-container">
           <div class="form__fill-input">
             <label for="form-name" class="form-label">Nombre completo</label>
             <input
@@ -162,11 +163,11 @@
         </div>
       </fieldset>
     </form>
-    <div class="js__parent3 js__collapsable3">
-      <div class="submit-share submit-collapsable">
+    <div class="collapsed">
+      <div class="submit-share js__collapsable">
         <h4 class="submit-share form-title title-3">Comparte</h4>
       </div>
-      <div class="submit-container collapsable">
+      <div class="submit-container collapsable-container">
         <button
           class="button-Create-before collapsebtn"
           type="submit"
