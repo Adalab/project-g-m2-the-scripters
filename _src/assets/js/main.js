@@ -11,26 +11,38 @@ const clickSubmit = document.querySelector('.submit-collapsable');
 
 const clickShare = document.querySelector('.collapsebtn');
 
-const collapseDesign = document.querySelector('.design-container');
-const collapseFill = document.querySelector('.fill-container');
-const collapseSubmit = document.querySelector('.submit-container');
-
-const collapseShare = document.querySelector('.share-container');
-
+const parent1 = document.querySelector('.js__parent1');
+const parent2 = document.querySelector('.js__parent2');
+const parent3 = document.querySelector('.js__parent3');
 
 //FUNCIÓN
 const openCollapsable = (event) => {
   const collapsable = event.currentTarget.parentElement;
-  collapsable.classList.toggle('js__collapsable1');
+
+  if (collapsable === parent1){
+    parent1.classList.toggle('js__collapsable1');
+    parent2.classList.add('js__collapsable2');
+    parent3.classList.add('js__collapsable3');
+  }
+  else if (collapsable === parent2){
+    parent1.classList.add('js__collapsable1');
+    parent2.classList.toggle('js__collapsable2');
+    parent3.classList.add('js__collapsable3');
+  }
+  else{
+    parent1.classList.add('js__collapsable1');
+    parent2.classList.add('js__collapsable2');
+    parent3.classList.toggle('js__collapsable3');
+  }
 }
-const openCollapsable2 = (event) => {
-  const collapsable = event.currentTarget.parentElement;
-  collapsable.classList.toggle('js__collapsable2');
-}
-const openCollapsable3 = (event) => {
-  const collapsable = event.currentTarget.parentElement;
-  collapsable.classList.toggle('js__collapsable3');
-}
+// const openCollapsable2 = (event) => {
+//   const collapsable = event.currentTarget.parentElement;
+//   collapsable.classList.toggle('js__collapsable2');
+// }
+// const openCollapsable3 = (event) => {
+//   const collapsable = event.currentTarget.parentElement;
+//   collapsable.classList.toggle('js__collapsable3');
+// }
 
 const openCollapsable4 = () => {
   event.preventDefault ();
@@ -40,8 +52,8 @@ const openCollapsable4 = () => {
 
 //Listeners
 clickDesign.addEventListener('click', openCollapsable);
-clickFill.addEventListener('click', openCollapsable2);
-clickSubmit.addEventListener('click', openCollapsable3);
+clickFill.addEventListener('click', openCollapsable);
+clickSubmit.addEventListener('click', openCollapsable);
 
 clickShare.addEventListener('click', openCollapsable4);
 
