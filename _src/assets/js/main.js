@@ -69,10 +69,15 @@ clickTheme3.addEventListener('click', changeColorTheme);
 const changeName = document.querySelector('.js__form-name');
 const writeName = document.querySelector('.js__title');
 
+const defaultElement = {
+  name : 'Nombre Apellido',
+  job: 'Front-end developer',
+}
+
 function changingName() {
   const inputValue = changeName.value;
   if (changeName.value === '') {
-    writeName.innerHTML = 'Nombre Apellido';
+    writeName.innerHTML = defaultElement.name;
   } else {
     writeName.innerHTML = inputValue;
   }
@@ -85,7 +90,7 @@ const writeJob = document.querySelector('.js__job');
 function changingJob() {
   const inputValue = changeJob.value;
   if (changeJob.value === '') {
-    writeJob.innerHTML = 'Front-end developer';
+    writeJob.innerHTML = defaultElement.job;
   } else {
     writeJob.innerHTML = inputValue;
   }
@@ -98,8 +103,8 @@ const resetButton = document.querySelector('.js__button');
 
 function resetCard() {
   console.log('funciona')
-  writeName.innerHTML = 'Nombre Apellido';
-  writeJob.innerHTML = 'Front-end developer';
+  writeName.innerHTML = defaultElement.name;
+  writeJob.innerHTML = defaultElement.job;
 }
 
 resetButton.addEventListener('click', resetCard);
