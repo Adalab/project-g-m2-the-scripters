@@ -9,11 +9,12 @@ const clickDesign = document.querySelector('.design-collapsable');
 const clickFill = document.querySelector('.fill-collapsable');
 const clickSubmit = document.querySelector('.submit-collapsable');
 
-const clickShare = document.querySelector('.collapsebtn');
-
 const parent1 = document.querySelector('.js__parent1');
 const parent2 = document.querySelector('.js__parent2');
 const parent3 = document.querySelector('.js__parent3');
+
+const clickShare = document.querySelector('.collapsebtn');
+const collapseShare = document.querySelector('.share-container');
 
 //FUNCIÓN
 const openCollapsable = (event) => {
@@ -35,16 +36,8 @@ const openCollapsable = (event) => {
     parent3.classList.toggle('js__collapsable3');
   }
 }
-// const openCollapsable2 = (event) => {
-//   const collapsable = event.currentTarget.parentElement;
-//   collapsable.classList.toggle('js__collapsable2');
-// }
-// const openCollapsable3 = (event) => {
-//   const collapsable = event.currentTarget.parentElement;
-//   collapsable.classList.toggle('js__collapsable3');
-// }
 
-const openCollapsable4 = () => {
+const openCollapsable2 = () => {
   event.preventDefault ();
   collapseShare.classList.toggle ('hidden');
   clickShare.classList.add('button-Create-after');
@@ -55,7 +48,7 @@ clickDesign.addEventListener('click', openCollapsable);
 clickFill.addEventListener('click', openCollapsable);
 clickSubmit.addEventListener('click', openCollapsable);
 
-clickShare.addEventListener('click', openCollapsable4);
+clickShare.addEventListener('click', openCollapsable2);
 
 
 
