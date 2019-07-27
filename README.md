@@ -17,7 +17,7 @@ Nos han pedido realizar una aplicación web para crear una tarjeta de visita per
 -*Gestión de eventos* en el navegador
 -Acceso y envío de *datos* a un *servidor*
 -Almacenamiento en local usando *LocalStorage*
--Uso de*git* para el control de versiones del proyecto
+-Uso de *git* para el control de versiones del proyecto
 -Publicación del resultado en *GitHub Pages*
 
 ####Estructura

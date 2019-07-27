@@ -108,3 +108,93 @@ function resetCard() {
 }
 
 resetButton.addEventListener('click', resetCard);
+
+
+//FUNCION REDES SOCIALES
+
+const changeMail = document.querySelector('.js__form-mail');
+const writeMail = document.querySelector('.js__icon-mail');
+const changePhone = document.querySelector('.js__form-phone');
+const writePhone = document.querySelector('.js__icon-phone');
+const changeLinkedin = document.querySelector('.js__form-linkedin');
+const writeLinkedin = document.querySelector('.js__icon-linkedin');
+const changeGithub = document.querySelector('.js__form-github');
+const writeGithub = document.querySelector('.js__icon-github');
+
+function writeMailfun () {
+  const inputValue = changeMail;
+  writeMail.href ='mailto: ' + inputValue;
+    if (inputValue === '') {
+      writeMail.classList.add('hidden');
+    } else {
+      writeMail.classList.remove('hidden');
+    }
+}
+
+function writePhonefun () {
+  const inputValue = changePhone;
+  writePhone.href ='tel: ' + inputValue;
+  if (inputValue === '') {
+    writePhone.classList.add('hidden');
+  } else {
+    writePhone.classList.remove('hidden');
+  }
+}
+
+function writeLikedinfun () {
+  const inputValue = changeLinkedin;
+  writeLinkedin.href = 'https://www.linkedin.com/in/' + inputValue;
+  if (inputValue === '') {
+    writeLinkedin.classList.add('hidden');
+  } else {
+    writeLinkedin.classList.remove('hidden');
+  }
+}
+
+function writeGithubfun () {
+  const inputValue = changeGithub;
+  writeGithub.href = 'https://github.com/' + inputValue;
+  if (inputValue === '') {
+    writeGithub.classList.add('hidden');
+  } else {
+    writeGithub.classList.remove('hidden');
+  }
+}
+
+/* function writeIcons (event) {
+  const inputValue = event.currentTarget.value;
+
+  if (event.currentTarget.classList.contains('js__form-mail'));
+  writeMail.href ='mailto: ' + inputValue;
+    if (inputValue === '') {
+      writeMail.classList.add('hidden');
+    } else {
+      writeMail.classList.remove('hidden');
+    }
+
+  else if (event.currentTarget.classList.contains('js__form-phone'));
+  writePhone.href ='tel: ' + inputValue;
+    if (inputValue === '') {
+      writePhone.classList.add('hidden');
+    } else {
+      writePhone.classList.remove('hidden');
+    }
+
+  else if (event.currentTarget.classList.contains('js__form-linkedin'));
+  writeLinkedin.href = 'https://www.linkedin.com/in/' + inputValue;
+    if (inputValue === '') {
+      writeLinkedin.classList.add('hidden');
+    } else {
+      writeLinkedin.classList.remove('hidden');
+    }
+}*/
+
+changeMail.addEventListener('keyup', writeMailfun);
+changePhone.addEventListener('keyup', writePhonefun);
+changeLinkedin.addEventListener('keyup', writeLikedinfun);
+changeGithub.addEventListener('keyup', writeGithubfun);
+
+/* changeMail.addEventListener('keyup', writeIcons);
+changePhone.addEventListener('keyup', writeIcons);
+changeLinkedin.addEventListener('keyup', writeIcons);
+ */
