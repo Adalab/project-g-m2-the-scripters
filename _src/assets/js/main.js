@@ -64,7 +64,7 @@ clickTheme2.addEventListener('click', changeColorTheme);
 clickTheme3.addEventListener('click', changeColorTheme);
 
 
-//FUNCION DE ESCRIBIR
+//FUNCION NOMBRE & TRABAJO
 
 const changeName = document.querySelector('.js__form-name');
 const writeName = document.querySelector('.js__title');
@@ -97,18 +97,6 @@ function changingJob() {
 }
 
 changeJob.addEventListener('keyup', changingJob);
-
-//RESET
-const resetButton = document.querySelector('.js__button');
-
-function resetCard() {
-  console.log('funciona')
-  writeName.innerHTML = defaultElement.name;
-  writeJob.innerHTML = defaultElement.job;
-}
-
-resetButton.addEventListener('click', resetCard);
-
 
 //FUNCION REDES SOCIALES
 
@@ -161,40 +149,20 @@ function writeGithubfun () {
   }
 }
 
-/* function writeIcons (event) {
-  const inputValue = event.currentTarget.value;
-
-  if (event.currentTarget.classList.contains('js__form-mail'));
-  writeMail.href ='mailto: ' + inputValue;
-    if (inputValue === '') {
-      writeMail.classList.add('hidden');
-    } else {
-      writeMail.classList.remove('hidden');
-    }
-
-  else if (event.currentTarget.classList.contains('js__form-phone'));
-  writePhone.href ='tel: ' + inputValue;
-    if (inputValue === '') {
-      writePhone.classList.add('hidden');
-    } else {
-      writePhone.classList.remove('hidden');
-    }
-
-  else if (event.currentTarget.classList.contains('js__form-linkedin'));
-  writeLinkedin.href = 'https://www.linkedin.com/in/' + inputValue;
-    if (inputValue === '') {
-      writeLinkedin.classList.add('hidden');
-    } else {
-      writeLinkedin.classList.remove('hidden');
-    }
-}*/
-
 changeMail.addEventListener('keyup', writeMailfun);
 changePhone.addEventListener('keyup', writePhonefun);
 changeLinkedin.addEventListener('keyup', writeLikedinfun);
 changeGithub.addEventListener('keyup', writeGithubfun);
 
-/* changeMail.addEventListener('keyup', writeIcons);
-changePhone.addEventListener('keyup', writeIcons);
-changeLinkedin.addEventListener('keyup', writeIcons);
- */
+
+//RESET
+const resetButton = document.querySelector('.js__button');
+
+function resetCard() {
+  console.log('funciona')
+  writeName.innerHTML = defaultElement.name;
+  writeJob.innerHTML = defaultElement.job;
+}
+
+resetButton.addEventListener('click', resetCard);
+
