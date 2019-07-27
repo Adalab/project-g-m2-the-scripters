@@ -58,7 +58,7 @@ function changeColorTheme(event) {
   card.classList.remove('theme-colors2');
   card.classList.remove('theme-colors3');
 
-  card.classList.add(event.currentTarget.value);
+  card.classList.add(`theme-colors${event.currentTarget.value}`);
 }
 
 clickTheme1.addEventListener('click', changeColorTheme);
