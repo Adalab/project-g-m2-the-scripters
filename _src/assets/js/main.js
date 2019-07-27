@@ -68,29 +68,29 @@ clickTheme3.addEventListener('click', changeColorTheme);
 
 //FUNCION DE ESCRIBIR
 
-const changeTitle = document.querySelector('.js__form-name');
-const writeTitle = document.querySelector('.js__title');
+const changeName = document.querySelector('.js__form-name');
+const writeName = document.querySelector('.js__title');
 
-function changeName() {
-  const inputValue = changeTitle.value;
-  if (changeTitle.value === '') {
-    writeTitle.innerHTML = 'Nombre Apellido';
+function changingName() {
+  const inputValue = changeName.value;
+  if (changeName.value === '') {
+    writeName.innerHTML = 'Nombre Apellido';
   } else {
-    writeTitle.innerHTML = inputValue;
+    writeName.innerHTML = inputValue;
   }
 }
-changeTitle.addEventListener('keyup', changeName);
+changeName.addEventListener('keyup', changingName);
 
-const Job = document.querySelector('.js__form-job');
+const changeJob = document.querySelector('.js__form-job');
 const writeJob = document.querySelector('.js__job');
 
-function changeJob() {
-  const inputValue = Job.value;
-  if (Job.value === '') {
+function changingJob() {
+  const inputValue = changeJob.value;
+  if (changeJob.value === '') {
     writeJob.innerHTML = 'Front-end developer';
   } else {
     writeJob.innerHTML = inputValue;
   }
 }
 
-Job.addEventListener('keyup', changeJob);
+changeJob.addEventListener('keyup', changingJob);
