@@ -108,3 +108,22 @@ function resetCard() {
 }
 
 resetButton.addEventListener('click', resetCard);
+
+
+//FUNCION REDES SOCIALES
+
+const changeMail = document.querySelector('.js__form-mail');
+const writeMail = document.querySelector('.js__icon-mail');
+
+function writeIcons (event) {
+  const inputValue = event.currentTarget.value;
+  if (event.currentTarget.classList.contains('js__form-mail'));
+  writeMail.href ='mailto: ' + inputValue;
+    if (inputValue === '') {
+      writeMail.classList.add('hidden');
+    } else {
+      writeMail.classList.remove('hidden');
+    }
+}
+
+changeMail.addEventListener('keyup', writeIcons);
