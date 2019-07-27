@@ -92,3 +92,14 @@ function changingJob() {
 }
 
 changeJob.addEventListener('keyup', changingJob);
+
+//RESET
+const resetButton = document.querySelector('.js__button');
+
+function resetCard() {
+  console.log('funciona')
+  writeName.innerHTML = 'Nombre Apellido';
+  writeJob.innerHTML = 'Front-end developer';
+}
+
+resetButton.addEventListener('click', resetCard);
