@@ -3,33 +3,35 @@
 console.log('>> Ready :)');
 
 //FUNCIONES COLLAPSABLES
-const clickDesign = document.querySelector('.design-collapsable');
-const clickFill = document.querySelector('.fill-collapsable');
-const clickSubmit = document.querySelector('.submit-collapsable');
 
-const parent1 = document.querySelector('.js__parent1');
-const parent2 = document.querySelector('.js__parent2');
-const parent3 = document.querySelector('.js__parent3');
+//Seleccionamos de manera global los tres collapsables
+const collapsables = document.querySelectorAll('.js__collapsable');
+
+//Creamos la función handler genérica
+const openCollapsable = (event) => {
+  //guardamos en una variable el padre donde ocurre el evento
+  const selectedCollapsable = event.currentTarget.parentElement;
+//recorremos todos los collapsables
+  for (let i = 0; i < collapsables.length; i++) {
+    //recogemos el padre del collapsable activo en el bucle
+    const parentElement = collapsables[i].parentElement;
+    //si el padre activo en el bucle coincide con el padre del evento
+    if (selectedCollapsable === parentElement) {
+      //si está abierto se cierra y si no se abre
+      selectedCollapsable.classList.toggle('collapsed');
+    } else {
+      //si no coincide se cierra
+      parentElement.classList.add('collapsed');
+    }
+  }
+}
+
+for (let i = 0; i < collapsables.length; i++) {
+  collapsables[i].addEventListener('click', openCollapsable);
+}
 
 const clickShare = document.querySelector('.collapsebtn');
 const collapseShare = document.querySelector('.share-container');
-
-const openCollapsable = (event) => {
-  const collapsable = event.currentTarget.parentElement;
-  if (collapsable === parent1){
-    parent1.classList.toggle('js__collapsable1');
-    parent2.classList.add('js__collapsable2');
-    parent3.classList.add('js__collapsable3');
-  } else if (collapsable === parent2) {
-    parent1.classList.add('js__collapsable1');
-    parent2.classList.toggle('js__collapsable2');
-    parent3.classList.add('js__collapsable3');
-  } else {
-    parent1.classList.add('js__collapsable1');
-    parent2.classList.add('js__collapsable2');
-    parent3.classList.toggle('js__collapsable3');
-  }
-}
 
 const openCollapsable2 = () => {
   event.preventDefault ();
@@ -37,9 +39,6 @@ const openCollapsable2 = () => {
   clickShare.classList.add('button-Create-after');
 }
 
-clickDesign.addEventListener('click', openCollapsable);
-clickFill.addEventListener('click', openCollapsable);
-clickSubmit.addEventListener('click', openCollapsable);
 
 clickShare.addEventListener('click', openCollapsable2);
 
@@ -53,7 +52,6 @@ const clickTheme3 = document.querySelector('.theme__radio3');
 const card = document.querySelector('.section1__card');
 
 function changeColorTheme(event) {
-  console.log(event.currentTarget.value)
   card.classList.remove('theme-colors1');
   card.classList.remove('theme-colors2');
   card.classList.remove('theme-colors3');

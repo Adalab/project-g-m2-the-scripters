@@ -161,19 +161,6 @@ margin: 0;
   font-weight: 400;
 }
 
-.title-1::after{
-  content: "\f078";
-  position: absolute;
-  right: 0;
-  top: 13px;
-  height: 18px;
-  font-weight: 600;
-  font-family: "Font Awesome 5 Pro";
-  color: $dark-grey;
-  transform: rotate(180deg);
-
-}
-
 .title-2::before{
   content: "\f11c";
   left:0;
@@ -185,18 +172,6 @@ margin: 0;
   font-weight: 400;
 }
 
-.title-2::after{
-  content: "\f078";
-  position: absolute;
-  right: 0;
-  top: 13px;
-  height: 18px;
-  font-weight: 600;
-  font-family: "Font Awesome 5 Pro";
-  color: $dark-grey;
-  transform: rotate(180deg);
-}
-
 .title-3::before{
   content: "\f1e0";
   left:0;
@@ -206,19 +181,6 @@ margin: 0;
   font-family: "Font Awesome 5 Pro";
   color: $dull-orange;
   font-weight: 900;
-}
-
-.title-3::after{
-  content: "\f078";
-  position: absolute;
-  right: 0;
-  top: 13px;
-  width: 16px;
-  height: 18px;
-  font-weight: 600;
-  font-family: "Font Awesome 5 Pro";
-  color: $dark-grey;
-  transform: rotate(180deg);
 }
 
 .hidden{
