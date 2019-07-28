@@ -72,6 +72,10 @@ const writeName = document.querySelector('.js__title');
 const defaultElement = {
   name : 'Nombre Apellido',
   job: 'Front-end developer',
+  email: '',
+  phone:'',
+  linkedin:'',
+  github:'',
 }
 
 function changingName() {
@@ -109,8 +113,7 @@ const writeLinkedin = document.querySelector('.js__icon-linkedin');
 const changeGithub = document.querySelector('.js__form-github');
 const writeGithub = document.querySelector('.js__icon-github');
 
-function writeMailfun () {
-  const inputValue = changeMail;
+function writeMailfun (inputValue) {
   writeMail.href ='mailto: ' + inputValue;
     if (inputValue === '') {
       writeMail.classList.add('hidden');
@@ -119,8 +122,7 @@ function writeMailfun () {
     }
 }
 
-function writePhonefun () {
-  const inputValue = changePhone;
+function writePhonefun (inputValue) {
   writePhone.href ='tel: ' + inputValue;
   if (inputValue === '') {
     writePhone.classList.add('hidden');
@@ -129,8 +131,7 @@ function writePhonefun () {
   }
 }
 
-function writeLikedinfun () {
-  const inputValue = changeLinkedin;
+function writeLikedinfun (inputValue) {
   writeLinkedin.href = 'https://www.linkedin.com/in/' + inputValue;
   if (inputValue === '') {
     writeLinkedin.classList.add('hidden');
@@ -139,8 +140,7 @@ function writeLikedinfun () {
   }
 }
 
-function writeGithubfun () {
-  const inputValue = changeGithub;
+function writeGithubfun (inputValue) {
   writeGithub.href = 'https://github.com/' + inputValue;
   if (inputValue === '') {
     writeGithub.classList.add('hidden');
@@ -149,10 +149,11 @@ function writeGithubfun () {
   }
 }
 
-changeMail.addEventListener('keyup', writeMailfun);
-changePhone.addEventListener('keyup', writePhonefun);
-changeLinkedin.addEventListener('keyup', writeLikedinfun);
-changeGithub.addEventListener('keyup', writeGithubfun);
+//creamos una función anónima como handler donde ejecutamos la función que queremos con sólo el value
+changeMail.addEventListener('keyup', (event) => writeMailfun(event.currentTarget.value));
+changePhone.addEventListener('keyup', (event) => writePhonefun(event.currentTarget.value));
+changeLinkedin.addEventListener('keyup', (event) => writeLikedinfun(event.currentTarget.value));
+changeGithub.addEventListener('keyup', (event) => writeGithubfun(event.currentTarget.value));
 
 
 //RESET
@@ -162,6 +163,14 @@ function resetCard() {
   console.log('funciona')
   writeName.innerHTML = defaultElement.name;
   writeJob.innerHTML = defaultElement.job;
+  changeMail.value = defaultElement.email;
+  changePhone.value = defaultElement.phone;
+  changeLinkedin.value = defaultElement.linkedin;
+  changeGithub.value = defaultElement.github;
+  writeMailfun(defaultElement.email);
+  writePhonefun(defaultElement.phone);
+  writeLikedinfun(defaultElement.linkedin);
+  writeGithubfun(defaultElement.github);
 }
 
 resetButton.addEventListener('click', resetCard);
