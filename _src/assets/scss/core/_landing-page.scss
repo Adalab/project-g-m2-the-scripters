@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .landing__main-title {
@@ -30,6 +31,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .landing__list-iconDesign {
@@ -122,4 +124,7 @@
     height: 29px;
   }
 
+  .landing__main-startButton{
+    margin-top: 186px;
+  }
 }
