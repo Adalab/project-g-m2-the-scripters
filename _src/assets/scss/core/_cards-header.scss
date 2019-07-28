@@ -1,10 +1,19 @@
+.cards__header{
+  box-sizing: border-box;
+  height: 112px;
+  padding: 30px 0 30px;
+}
+
 .cards__title{
     background-image: url(../../assets/images/logo.svg);
     background-repeat: no-repeat;
     background-size: contain;
     width: 200px;
-    padding-top: 94px;
+    padding-top: 50px;
     height: 1px;
     overflow: hidden;
-    margin: 30px 0 0 40px;
+    margin: 0 0 0 40px;
+    box-sizing: border-box;
 }
+
+
