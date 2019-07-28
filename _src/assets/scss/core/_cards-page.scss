@@ -1,11 +1,20 @@
 @import 'cards-page-s1';
 @import 'cards-page-s2';
 
+.cards__main{
+  @media all and (min-width:768px) {
+    flex-grow: 2;
+  }
+}
+
 .cards__container {
   @media all and (min-width:768px) {
     display:grid;
     grid-template-columns: 369px 1fr;
     background-image:linear-gradient($grey-landing, $white);
     padding:20px 40px;
+    height: 100%;
+    box-sizing: border-box;
   }
 }
+

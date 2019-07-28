@@ -2,3 +2,11 @@
   margin:0;
   padding: 0;
 }
+
+.page-cards{
+  @media all and (min-width:678px){
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+}
