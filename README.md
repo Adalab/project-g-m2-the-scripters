@@ -15,21 +15,21 @@ Nos han pedido realizar una aplicación web para crear una tarjeta de visita per
 
 #### Tecnologías:
 
--Uso avanzado de *formularios HTML*
+-Uso avanzado de **formularios HTML**
 
--Maquetación usando CSS avanzado (*flex* y *grid*)
+-Maquetación usando CSS avanzado (**flex** y **grid**)
 
--Uso de *mediaqueries* para que el diseño sea adaptable al dispositivo usando la estrategia *mobile first*
+-Uso de *mediaqueries* para que el diseño sea adaptable al dispositivo usando la estrategia **mobile first**
 
--*Gestión de eventos* en el navegador
+-**Gestión de eventos** en el navegador
 
--Acceso y envío de *datos* a un *servidor*
+-Acceso y envío de **datos** a un **servidor**
 
--Almacenamiento en local usando *LocalStorage*
+-Almacenamiento en local usando **LocalStorage**
 
--Uso de *git* para el control de versiones del proyecto
+-Uso de **git** para el control de versiones del proyecto
 
--Publicación del resultado en *GitHub Pages*
+-Publicación del resultado en **GitHub Pages**
 
 #### Estructura
 
