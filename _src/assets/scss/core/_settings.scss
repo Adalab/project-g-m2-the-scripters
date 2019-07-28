@@ -4,9 +4,16 @@
 }
 
 .page-cards{
-  @media all and (min-width:678px){
+  @media all and (min-width:768px){
     display: flex;
     flex-direction: column;
     height: 100vh;
   }
+}
+
+.page-landing{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: $grey-landing;
 }

@@ -11,9 +11,25 @@
   width: 250px;
   background-size: contain;
   background-position: center;
-  padding-top: 94px;
+  padding-top: 63px;
   height: 1px;
-
   overflow: hidden;
   margin:0;
 }
+
+.page__flex{
+  flex-grow: 1;
+
+}
+@media all and (min-width: 768px){
+  .landing__header{
+    padding-top: 350px;
+  }
+  .landing__title{
+    width: 420px;
+    padding-top: 107px;
+  }
+}
+
+
+

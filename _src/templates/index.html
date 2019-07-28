@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
+  <head>
     <partial src="_head.html" label="Head"></partial>
-</head>
+  </head>
 
-<body class="body">
-  <div class="page">
-    <partial src="_landing-header.html" label="Landing header"></partial>
-    <partial src="_landing-page.html" label="Landing page"></partial>
-    <partial src="_footer.html" label="Footer"></partial>
-
-  </div>
-  <script src="assets/js/main.js"></script>
-</body>
-
+  <body class="body">
+    <div class="page page-landing">
+      <div class="page__flex">
+        <partial src="_landing-header.html" label="Landing header"></partial>
+        <partial src="_landing-page.html" label="Landing page"></partial>
+      </div>
+      <partial src="_footer.html" label="Footer"></partial>
+    </div>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
