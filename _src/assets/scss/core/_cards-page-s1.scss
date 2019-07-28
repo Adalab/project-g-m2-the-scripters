@@ -12,6 +12,8 @@
   }
 
   &__card {
+    width:240px;
+    min-height: 330px;
     margin-top: 20px;
     background-color: $white;
     padding-top:21px;
@@ -27,11 +29,13 @@
   &__name {
     @include Cards-Card-Name;
     margin:0 0 4px;
+    word-break: break-word;
   }
 
   &__career {
     @include Cards-Card-Career;
     margin:0;
+    word-break: break-word;
   }
 
   &__image {
