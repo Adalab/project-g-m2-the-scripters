@@ -12,8 +12,10 @@
 }
 
 .page-landing{
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: $grey-landing;
+  align-items: center;
+  justify-content: center;
 }

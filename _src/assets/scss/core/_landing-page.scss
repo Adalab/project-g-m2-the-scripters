@@ -33,6 +33,11 @@
   align-items: center;
   box-sizing: border-box;
 }
+.landing__main-item{
+  display: inline-block;
+  width: 60px;
+  height: 49px;
+}
 
 .landing__list-iconDesign {
   height: 26px;
@@ -102,6 +107,12 @@
   .landing__main-list {
     width: 325px;
     height: 86px;
+  }
+
+  .landing__main-item{
+    display: inline-block;
+    width: 75px;
+    height: 61px;
   }
 
   .landing__list-iconDesign {
