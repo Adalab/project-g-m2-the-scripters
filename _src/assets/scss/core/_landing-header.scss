@@ -2,7 +2,7 @@
   background-color: $grey-landing;
   display: flex;
   justify-content: center;
-  padding-top: 95px;
+  // padding-top: 95px;
 }
 
 .landing__title {
@@ -19,8 +19,11 @@
 
 .page__flex{
   flex-grow: 1;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
 @media all and (min-width: 768px){
   .landing__title{
     width: 420px;
