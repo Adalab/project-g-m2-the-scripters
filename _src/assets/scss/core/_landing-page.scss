@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   box-sizing: border-box;
 }
 
@@ -74,8 +75,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 38.6px;
-  margin-bottom: 30px;
+  margin-top: 39px;
+  margin-bottom: 60px;
     .landing__main-start {
       text-decoration: none;
       text-transform: uppercase;
@@ -91,7 +92,9 @@
 /* MEDIA QUERY TABLET */
 
 @media all and (min-width: 768px){
-
+  .landing__main{
+    min-height: 425px;
+  }
   .landing__main-title {
     @include Landing-Title-tablet;
     margin-top: 31px;
@@ -133,9 +136,5 @@
 
   .landing__main-image {
     height: 29px;
-  }
-
-  .landing__main-startButton{
-    margin-top: 186px;
   }
 }
