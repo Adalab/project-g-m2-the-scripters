@@ -85,8 +85,10 @@ function changingName() {
   } else {
     writeName.innerHTML = inputValue;
   }
+  imgCard.alt= inputValue;
 }
 changeName.addEventListener('keyup', changingName);
+
 
 const changeJob = document.querySelector('.js__form-job');
 const writeJob = document.querySelector('.js__job');
