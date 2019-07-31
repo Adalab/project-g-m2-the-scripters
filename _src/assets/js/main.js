@@ -182,9 +182,9 @@ const imageCardContainer = document.querySelector ('.section1__image');
 
 imageCardContainer.style.backgroundImage = `url(${backgroundImg})`;
 
-const imgCard = document.querySelector ('.section1__image-img');
+const imgCard = document.querySelector ('#img');
 
-imageCardContainer.setAttribute (src,`${backgroundImg}`);
+imgCard.src=`${backgroundImg}`;
 
 
 //IMAGEN PREVISUALIZACIÓN
