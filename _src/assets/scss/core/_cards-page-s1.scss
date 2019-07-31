@@ -39,15 +39,20 @@
   }
 
   &__image {
-    background-size:cover;
     background-repeat:no-repeat;
     background-position: center;
+    background-size:cover;
     height: 240px;
-
-    img {
+    position: relative;
+  }
+  &__image-img {
       height:1px;
       width:1px;
-    }
+      position: absolute;
+      left: -1px;
+      top: 0;
+      overflow: hidden;
+
   }
 
   &__links {
