@@ -147,7 +147,13 @@ function writeLikedinfun (inputValue) {
 }
 
 function writeGithubfun (inputValue) {
-  writeGithub.href = 'https://github.com/' + inputValue;
+  let newInputValue = '';
+  if (inputValue.includes('@')) {
+    newInputValue = inputValue.replace('@', '');
+  } else {
+    newInputValue = inputValue;
+  }
+  writeGithub.href = 'https://github.com/' + newInputValue;
   if (inputValue === '') {
     writeGithub.classList.add('hidden');
   } else {
