@@ -85,8 +85,10 @@ function changingName() {
   } else {
     writeName.innerHTML = inputValue;
   }
+  imgCard.alt= inputValue;
 }
 changeName.addEventListener('keyup', changingName);
+
 
 const changeJob = document.querySelector('.js__form-job');
 const writeJob = document.querySelector('.js__job');
@@ -199,6 +201,10 @@ const imgCard = document.querySelector ('#img');
 imgCard.src=`${backgroundImg}`;
 
 
+const previewImage = document.querySelector ('.form-photo-preview');
+
+previewImage.style.backgroundImage = `url(${backgroundImg})`;
+
 //IMAGEN PREVISUALIZACIÓN
 
 const fr = new FileReader();
@@ -233,6 +239,7 @@ function writeImage() {
    */
   profileImage.style.backgroundImage = `url(${fr.result})`;
   profilePreview.style.backgroundImage = `url(${fr.result})`;
+  imgCard.src=`${fr.result}`;
 }
 
 
