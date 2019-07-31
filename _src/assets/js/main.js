@@ -132,7 +132,13 @@ function writePhonefun (inputValue) {
 }
 
 function writeLikedinfun (inputValue) {
-  writeLinkedin.href = 'https://www.linkedin.com/in/' + inputValue;
+  let newInputValue = '';
+  if (inputValue.includes('@')) {
+    newInputValue = inputValue.replace('@', '');
+  } else {
+    newInputValue = inputValue;
+  }
+  writeLinkedin.href = 'https://www.linkedin.com/in/' + newInputValue;
   if (inputValue === '') {
     writeLinkedin.classList.add('hidden');
   } else {
