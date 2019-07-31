@@ -175,6 +175,18 @@ function resetCard() {
 
 resetButton.addEventListener('click', resetCard);
 
+
+//IMAGEN POR DEFECTO
+
+const imageCardContainer = document.querySelector ('.section1__image');
+
+imageCardContainer.style.backgroundImage = `url(${backgroundImg})`;
+
+const imgCard = document.querySelector ('.section1__image-img');
+
+imageCardContainer.setAttribute (src,`${backgroundImg}`);
+
+
 //IMAGEN PREVISUALIZACIÓN
 
 const fr = new FileReader();
