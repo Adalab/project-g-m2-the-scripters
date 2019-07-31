@@ -187,6 +187,10 @@ const imgCard = document.querySelector ('#img');
 imgCard.src=`${backgroundImg}`;
 
 
+const previewImage = document.querySelector ('.form-photo-preview');
+
+previewImage.style.backgroundImage = `url(${backgroundImg})`;
+
 //IMAGEN PREVISUALIZACIÓN
 
 const fr = new FileReader();
