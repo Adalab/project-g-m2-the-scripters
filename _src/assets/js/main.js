@@ -275,30 +275,30 @@ fileField.addEventListener('change', getImage);
 const shareUrl = document.querySelector('.js__response');
 const clickShare = document.querySelector('.collapsebtn');
 
-const arrayForms = {
-  "palette": 1,
+const defaultArray = {
+  "palette": "1",
   "name": "María García",
   "job": "Front-end developer",
   "phone": "+34 666666666",
   "email": "mariagar@example.com",
   "linkedin": "mariagar",
   "github": "mariagar",
-  "photo": "data:image/png;base64,2342ba..."
+  "photo": backgroundImg
 };
 
 function sendRequest(json){
   fetch("https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/", {
     method: 'POST',
-    body: JSON.stringify(json),
+    body: JSON.stringify(defaultArray),
     headers: {
       'content-type': 'application/json'
     },
   })
     .then(function(resp) { return resp.json(); })
-    .then(data => {shareUrl.innerHTMLML = data.cardURL});
+    .then(data => {
+      shareUrl.innerHTML = '<a class="share-link-url" target="__blank" href=' + data.cardURL + '>' + data.cardURL + '</a>';
+    });
 }
-
-console.log(sendRequest(arrayForms));
 
 clickShare.addEventListener('click',sendRequest);
 
