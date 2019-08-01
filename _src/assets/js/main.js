@@ -29,7 +29,7 @@ const openCollapsable = (event) => {
 for (let i = 0; i < collapsables.length; i++) {
   collapsables[i].addEventListener('click', openCollapsable);
 }
-
+/*
 const clickShare = document.querySelector('.collapsebtn');
 const collapseShare = document.querySelector('.share-container');
 
@@ -41,7 +41,7 @@ const openCollapsable2 = () => {
 
 
 clickShare.addEventListener('click', openCollapsable2);
-
+*/
 
 //FUNCIONES COLORES
 
@@ -272,6 +272,8 @@ fileField.addEventListener('change', getImage);
     "photo": `${fr.result}`,
   };
   */
+const shareUrl = document.querySelector('.js__response');
+const clickShare = document.querySelector('.collapsebtn');
 
 const arrayForms = {
   "palette": 1,
@@ -293,16 +295,14 @@ function sendRequest(json){
     },
   })
     .then(function(resp) { return resp.json(); })
-    .then(data => {console.log(data)});
+    .then(data => {shareUrl.innerHTMLML = data.cardURL});
 }
 
 console.log(sendRequest(arrayForms));
-/*
-var submitButton = document.querySelector('#submit');
-var responseURL = document.querySelector('.js__response');
-var form = document.querySelector('#form');
-var fr = new FileReader();
 
-submitButton.addEventListener('click', loadPhoto);
-*/
+clickShare.addEventListener('click',sendRequest);
+
+
+
+
 
