@@ -261,21 +261,21 @@ fileField.addEventListener('change', getImage);
 
 //PETICIONES AL SERVIDOR
 
-/*const arrayForm = {
-    "palette": input.value,
-    "name": input.value,
-    "job": input.value,
-    "phone": input.value,
-    "email": input.value,
-    "linkedin": input.value,
-    "github": input.value,
-    "photo": `${fr.result}`,
+const objectForm = {
+    "palette": '',
+    "name": '',
+    "job": '',
+    "phone": '',
+    "email": '',
+    "linkedin": '',
+    "github": '',
+    "photo": ''
   };
-  */
+
 const shareUrl = document.querySelector('.js__response');
 const clickShare = document.querySelector('.collapsebtn');
 
-const defaultArray = {
+/*const defaultArray = {
   "palette": "1",
   "name": "María García",
   "job": "Front-end developer",
@@ -285,11 +285,26 @@ const defaultArray = {
   "github": "mariagar",
   "photo": backgroundImg
 };
+*/
+
+function writeObject(){
+  objectForm.palette = '2';
+  objectForm.name = changeName.value;
+  objectForm.job = changeJob.value;
+  objectForm.phone = changePhone.value;
+  objectForm.email = changeMail.value;
+  objectForm.linkedin = changeLinkedin.value;
+  objectForm.github = changeGithub.value;
+  objectForm.photo = fr.result;
+
+}
 
 function sendRequest(json){
+  writeObject();
+  console.log(objectForm);
   fetch("https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/", {
     method: 'POST',
-    body: JSON.stringify(defaultArray),
+    body: JSON.stringify(objectForm),
     headers: {
       'content-type': 'application/json'
     },
