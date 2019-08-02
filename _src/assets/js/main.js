@@ -57,6 +57,8 @@ function changeColorTheme(event) {
   card.classList.remove('theme-colors3');
 
   card.classList.add(`theme-colors${event.currentTarget.value}`);
+  const resultColorValue = event.currentTarget.value
+  return resultColorValue;
 }
 
 clickTheme1.addEventListener('click', changeColorTheme);
@@ -275,20 +277,8 @@ const objectForm = {
 const shareUrl = document.querySelector('.js__response');
 const clickShare = document.querySelector('.collapsebtn');
 
-/*const defaultArray = {
-  "palette": "1",
-  "name": "María García",
-  "job": "Front-end developer",
-  "phone": "+34 666666666",
-  "email": "mariagar@example.com",
-  "linkedin": "mariagar",
-  "github": "mariagar",
-  "photo": backgroundImg
-};
-*/
-
 function writeObject(){
-  objectForm.palette = '2';
+  objectForm.palette = console.log(changeColorTheme());
   objectForm.name = changeName.value;
   objectForm.job = changeJob.value;
   objectForm.phone = changePhone.value;
@@ -296,7 +286,6 @@ function writeObject(){
   objectForm.linkedin = changeLinkedin.value;
   objectForm.github = changeGithub.value;
   objectForm.photo = fr.result;
-
 }
 
 function sendRequest(json){
