@@ -72,12 +72,17 @@ const changeName = document.querySelector('.js__form-name');
 const writeName = document.querySelector('.js__title');
 
 const defaultElement = {
+  color : 1,
   name : 'Nombre Apellido',
   job: 'Front-end developer',
   email: '',
   phone:'',
   linkedin:'',
   github:'',
+  imageCardContainer: `url(${backgroundImg})`,
+  imgCard: `${backgroundImg}`,
+  previewImage: `url(${backgroundImg})`,
+
 }
 
 function changingName() {
@@ -195,10 +200,10 @@ function resetCard() {
   writePhonefun(defaultElement.phone);
   writeLikedinfun(defaultElement.linkedin);
   writeGithubfun(defaultElement.github);
-  imageCardContainer.style.backgroundImage = `url(${backgroundImg})`;
-  imgCard.src=`${backgroundImg}`;
-  previewImage.style.backgroundImage = `url(${backgroundImg})`;
-  changeColorTheme(1);
+  imageCardContainer.style.backgroundImage = defaultElement.imageCardContainer ;
+  imgCard.src= defaultElement.imgCard;
+  previewImage.style.backgroundImage = defaultElement.previewImage;
+  changeColorTheme(defaultElement.color);
 }
 
 resetButton.addEventListener('click', resetCard);
