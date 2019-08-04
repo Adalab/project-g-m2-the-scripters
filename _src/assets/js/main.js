@@ -51,19 +51,19 @@ const clickTheme3 = document.querySelector('.theme__radio3');
 
 const card = document.querySelector('.section1__card');
 
-function changeColorTheme(event) {
+function changeColorTheme(value) {
   card.classList.remove('theme-colors1');
   card.classList.remove('theme-colors2');
   card.classList.remove('theme-colors3');
 
-  card.classList.add(`theme-colors${event.currentTarget.value}`);
-  const resultColorValue = event.currentTarget.value
+  card.classList.add(`theme-colors${value}`);
+  const resultColorValue = value
   return resultColorValue;
 }
 
-clickTheme1.addEventListener('click', changeColorTheme);
-clickTheme2.addEventListener('click', changeColorTheme);
-clickTheme3.addEventListener('click', changeColorTheme);
+clickTheme1.addEventListener('click', (event) => changeColorTheme(event.currentTarget.value));
+clickTheme2.addEventListener('click', (event) => changeColorTheme(event.currentTarget.value));
+clickTheme3.addEventListener('click', (event) => changeColorTheme(event.currentTarget.value));
 
 
 //FUNCION NOMBRE & TRABAJO
@@ -72,12 +72,17 @@ const changeName = document.querySelector('.js__form-name');
 const writeName = document.querySelector('.js__title');
 
 const defaultElement = {
+  color : 1,
   name : 'Nombre Apellido',
   job: 'Front-end developer',
   email: '',
   phone:'',
   linkedin:'',
   github:'',
+  imageCardContainer: `url(${backgroundImg})`,
+  imgCard: `${backgroundImg}`,
+  previewImage: `url(${backgroundImg})`,
+
 }
 
 function changingName() {
@@ -171,6 +176,15 @@ changePhone.addEventListener('keyup', (event) => writePhonefun(event.currentTarg
 changeLinkedin.addEventListener('keyup', (event) => writeLikedinfun(event.currentTarget.value));
 changeGithub.addEventListener('keyup', (event) => writeGithubfun(event.currentTarget.value));
 
+//IMAGEN POR DEFECTO
+
+const imageCardContainer = document.querySelector ('.section1__image');
+const previewImage = document.querySelector ('.form-photo-preview');
+const imgCard = document.querySelector ('#img');
+
+imageCardContainer.style.backgroundImage = `url(${backgroundImg})`;
+imgCard.src=`${backgroundImg}`;
+previewImage.style.backgroundImage = `url(${backgroundImg})`;
 
 //RESET
 const resetButton = document.querySelector('.js__button');
@@ -186,25 +200,14 @@ function resetCard() {
   writePhonefun(defaultElement.phone);
   writeLikedinfun(defaultElement.linkedin);
   writeGithubfun(defaultElement.github);
+  imageCardContainer.style.backgroundImage = defaultElement.imageCardContainer ;
+  imgCard.src= defaultElement.imgCard;
+  previewImage.style.backgroundImage = defaultElement.previewImage;
+  changeColorTheme(defaultElement.color);
 }
 
 resetButton.addEventListener('click', resetCard);
 
-
-//IMAGEN POR DEFECTO
-
-const imageCardContainer = document.querySelector ('.section1__image');
-
-imageCardContainer.style.backgroundImage = `url(${backgroundImg})`;
-
-const imgCard = document.querySelector ('#img');
-
-imgCard.src=`${backgroundImg}`;
-
-
-const previewImage = document.querySelector ('.form-photo-preview');
-
-previewImage.style.backgroundImage = `url(${backgroundImg})`;
 
 //IMAGEN PREVISUALIZACIÓN
 
