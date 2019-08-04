@@ -198,6 +198,7 @@ function resetCard() {
   imageCardContainer.style.backgroundImage = `url(${backgroundImg})`;
   imgCard.src=`${backgroundImg}`;
   previewImage.style.backgroundImage = `url(${backgroundImg})`;
+  changeColorTheme();
 }
 
 resetButton.addEventListener('click', resetCard);
