@@ -2,6 +2,7 @@
 
 console.log('>> Ready :)');
 
+
 //FUNCIONES COLLAPSABLES
 
 //Seleccionamos de manera global los tres collapsables
@@ -301,6 +302,21 @@ function sendRequest(){
 clickShare.addEventListener('click',sendRequest);
 
 
+//FUNCIONALIDAD DEL BOTÓN TWITTER
+
+const buttonTwitter = document.querySelector('.js__button-Twitter');
+
+const buttonTwitterHidden = document.querySelector ('.twitter-share-button');
+console.log(buttonTwitterHidden);
+
+
+function openTwitter ()  {
+  buttonTwitterHidden.click();
+  console.log(buttonTwitterHidden.click());
+}
+;
+
+buttonTwitter.addEventListener('click', openTwitter);
 
 
 
