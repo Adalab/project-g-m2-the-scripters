@@ -313,7 +313,7 @@ function openTwitter ()  {
   const userUrl = cardUrl;
   const twitterText = '¡Hola! Aquí tienes mi tarjeta de contacto. No te olvides de llamarme. Saludos!';
   const hashtags = 'adalab,the-scripters,js';
-  window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(userUrl)+'&text='+encodeURIComponent(twitterText), '', 'left=0,top=0,width=550,height=450,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
+  window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(userUrl)+'&text='+encodeURIComponent(twitterText), '', 'left=0,top=0,width=320,height=450,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
 }
 
 buttonTwitter.addEventListener('click', openTwitter);
