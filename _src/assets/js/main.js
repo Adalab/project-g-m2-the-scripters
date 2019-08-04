@@ -171,6 +171,15 @@ changePhone.addEventListener('keyup', (event) => writePhonefun(event.currentTarg
 changeLinkedin.addEventListener('keyup', (event) => writeLikedinfun(event.currentTarget.value));
 changeGithub.addEventListener('keyup', (event) => writeGithubfun(event.currentTarget.value));
 
+//IMAGEN POR DEFECTO
+
+const imageCardContainer = document.querySelector ('.section1__image');
+const previewImage = document.querySelector ('.form-photo-preview');
+const imgCard = document.querySelector ('#img');
+
+imageCardContainer.style.backgroundImage = `url(${backgroundImg})`;
+imgCard.src=`${backgroundImg}`;
+previewImage.style.backgroundImage = `url(${backgroundImg})`;
 
 //RESET
 const resetButton = document.querySelector('.js__button');
@@ -186,25 +195,13 @@ function resetCard() {
   writePhonefun(defaultElement.phone);
   writeLikedinfun(defaultElement.linkedin);
   writeGithubfun(defaultElement.github);
+  imageCardContainer.style.backgroundImage = `url(${backgroundImg})`;
+  imgCard.src=`${backgroundImg}`;
+  previewImage.style.backgroundImage = `url(${backgroundImg})`;
 }
 
 resetButton.addEventListener('click', resetCard);
 
-
-//IMAGEN POR DEFECTO
-
-const imageCardContainer = document.querySelector ('.section1__image');
-
-imageCardContainer.style.backgroundImage = `url(${backgroundImg})`;
-
-const imgCard = document.querySelector ('#img');
-
-imgCard.src=`${backgroundImg}`;
-
-
-const previewImage = document.querySelector ('.form-photo-preview');
-
-previewImage.style.backgroundImage = `url(${backgroundImg})`;
 
 //IMAGEN PREVISUALIZACIÓN
 
