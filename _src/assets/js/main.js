@@ -285,6 +285,8 @@ function writeObject(){
   return objectForm;
 }
 
+let cardUrl = '';
+
 function sendRequest(){
   fetch("https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/", {
     method: 'POST',
@@ -295,28 +297,24 @@ function sendRequest(){
   })
     .then(function(resp) { return resp.json(); })
     .then(data => {
-      shareUrl.innerHTML = '<a class="share-link-url" target="__blank" href=' + data.cardURL + '>' + data.cardURL + '</a>';
+      cardUrl = data.cardURL;
+      shareUrl.innerHTML = '<a class="share-link-url" target="__blank" href=' + cardUrl + '>' + cardUrl + '</a>';
     });
 }
 
 clickShare.addEventListener('click',sendRequest);
 
 
-//FUNCIONALIDAD DEL BOTÓN TWITTER
+// FUNCIONALIDAD DEL BOTÓN TWITTER
 
 const buttonTwitter = document.querySelector('.js__button-Twitter');
 
-const buttonTwitterHidden = document.querySelector ('.twitter-share-button');
-console.log(buttonTwitterHidden);
-
-
 function openTwitter ()  {
-  buttonTwitterHidden.click();
-  console.log(buttonTwitterHidden.click());
+  const userUrl = cardUrl;
+  const twitterText = '¡Hola! Aquí tienes mi tarjeta de contacto. No te olvides de llamarme. Saludos!';
+  const hashtags = 'adalab,the-scripters,js';
+  window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(userUrl)+'&text='+encodeURIComponent(twitterText), '', 'left=0,top=0,width=550,height=450,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
 }
-;
 
 buttonTwitter.addEventListener('click', openTwitter);
-
-
 
