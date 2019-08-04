@@ -176,7 +176,6 @@ changeGithub.addEventListener('keyup', (event) => writeGithubfun(event.currentTa
 const resetButton = document.querySelector('.js__button');
 
 function resetCard() {
-  console.log('funciona')
   writeName.innerHTML = defaultElement.name;
   writeJob.innerHTML = defaultElement.job;
   changeMail.value = defaultElement.email;
@@ -263,22 +262,17 @@ fileField.addEventListener('change', getImage);
 
 //PETICIONES AL SERVIDOR
 
-const objectForm = {
-    "palette": '',
-    "name": '',
-    "job": '',
-    "phone": '',
-    "email": '',
-    "linkedin": '',
-    "github": '',
-    "photo": ''
-  };
-
 const shareUrl = document.querySelector('.js__response');
 const clickShare = document.querySelector('.collapsebtn');
+const themeRadio = document.querySelectorAll('.js__theme__radio');
 
 function writeObject(){
-  objectForm.palette = console.log(changeColorTheme());
+  const objectForm = {};
+  for (let color of themeRadio) {
+    if(color.checked) {
+      objectForm.palette = color.value;
+    }
+  }
   objectForm.name = changeName.value;
   objectForm.job = changeJob.value;
   objectForm.phone = changePhone.value;
@@ -286,14 +280,14 @@ function writeObject(){
   objectForm.linkedin = changeLinkedin.value;
   objectForm.github = changeGithub.value;
   objectForm.photo = fr.result;
+
+  return objectForm;
 }
 
-function sendRequest(json){
-  writeObject();
-  console.log(objectForm);
+function sendRequest(){
   fetch("https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/", {
     method: 'POST',
-    body: JSON.stringify(objectForm),
+    body: JSON.stringify(writeObject()),
     headers: {
       'content-type': 'application/json'
     },
