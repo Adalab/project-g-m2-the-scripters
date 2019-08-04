@@ -51,19 +51,19 @@ const clickTheme3 = document.querySelector('.theme__radio3');
 
 const card = document.querySelector('.section1__card');
 
-function changeColorTheme(event) {
+function changeColorTheme(value) {
   card.classList.remove('theme-colors1');
   card.classList.remove('theme-colors2');
   card.classList.remove('theme-colors3');
 
-  card.classList.add(`theme-colors${event.currentTarget.value}`);
-  const resultColorValue = event.currentTarget.value
+  card.classList.add(`theme-colors${value}`);
+  const resultColorValue = value
   return resultColorValue;
 }
 
-clickTheme1.addEventListener('click', changeColorTheme);
-clickTheme2.addEventListener('click', changeColorTheme);
-clickTheme3.addEventListener('click', changeColorTheme);
+clickTheme1.addEventListener('click', (event) => changeColorTheme(event.currentTarget.value));
+clickTheme2.addEventListener('click', (event) => changeColorTheme(event.currentTarget.value));
+clickTheme3.addEventListener('click', (event) => changeColorTheme(event.currentTarget.value));
 
 
 //FUNCION NOMBRE & TRABAJO
@@ -198,7 +198,7 @@ function resetCard() {
   imageCardContainer.style.backgroundImage = `url(${backgroundImg})`;
   imgCard.src=`${backgroundImg}`;
   previewImage.style.backgroundImage = `url(${backgroundImg})`;
-  changeColorTheme();
+  changeColorTheme(1);
 }
 
 resetButton.addEventListener('click', resetCard);
