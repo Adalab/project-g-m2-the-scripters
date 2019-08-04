@@ -148,9 +148,18 @@ margin: 0;
 
 .share-link {
   @include Cards-Form-Link;
+  display: block;
   margin: 5px 0 13px;
   overflow: visible;
 }
+
+.share-link-url{
+  @include Cards-Form-Link;
+  display: block;
+  margin: 5px 0 13px;
+  overflow: visible;
+}
+
 
 .title-1::before{
   content: "\f248";

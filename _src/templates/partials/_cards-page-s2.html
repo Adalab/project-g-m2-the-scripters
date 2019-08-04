@@ -13,9 +13,9 @@
               <label for="t1" class="theme__row">
                 <input
                   type="radio"
-                  class="theme__radio theme__radio1"
+                  class="theme__radio theme__radio1 js__theme__radio"
                   id="t1"
-                  name="theme"
+                  name="palette"
                   value="1"
                   checked
                 />
@@ -34,9 +34,9 @@
               <label for="t2" class="theme__row">
                 <input
                   type="radio"
-                  class="theme__radio theme__radio2"
+                  class="theme__radio theme__radio2 js__theme__radio"
                   id="t2"
-                  name="theme"
+                  name="palette"
                   value="2"
                 />
                 <ul class="colors">
@@ -56,9 +56,9 @@
               <label for="t3" class="theme__row">
                 <input
                   type="radio"
-                  class="theme__radio theme__radio3"
+                  class="theme__radio theme__radio3 js__theme__radio"
                   id="t3"
-                  name="theme"
+                  name="palette"
                   value="3"
                 />
                 <ul class="colors">
@@ -87,7 +87,7 @@
               type="text"
               class="form-text js__form-name"
               id="form-name"
-              name="full_name"
+              name="name"
               placeholder="Ej: Sally Jill"
               required
             />
@@ -169,19 +169,27 @@
       </div>
       <div class="submit-container collapsable-container">
         <button
-          class="button-Create-before collapsebtn"
-          type="submit"
+          class="button-Create-before collapsebtn js__submit"
+          type="button"
           form="form"
+          id="submit"
         >
           Crear tarjeta
         </button>
       </div>
     </div>
-    <div class="share-container hidden">
+    <div class="share-container">
       <p class="card-success">La tarjeta ha sido creada:</p>
+<<<<<<< HEAD
       <p class="share-link">https://awesome-profile-card.com?id=A456DF0001</p>
       <!-- <button class="button-Twitter" type="submit">Compartir en twitter</button> -->
       <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button button-Twitter" data-text="¡Hola! Aquí tienes mi tarjeta de contacto. No te olvides de llamarme. Saludos! " data-hashtags="#thescripters #awesome-profile-cards" data-lang="es" data-show-count="false">Compartir en twitter</a>
+=======
+      <p class="share-link js__response" href="">https://awesome-profile-card.com?id=A456DF0001</p>
+      <button class="button-Twitter" type="submit">Compartir en twitter</button>
+>>>>>>> dev
     </div>
   </div>
 </section>
+
+

@@ -29,7 +29,7 @@ const openCollapsable = (event) => {
 for (let i = 0; i < collapsables.length; i++) {
   collapsables[i].addEventListener('click', openCollapsable);
 }
-
+/*
 const clickShare = document.querySelector('.collapsebtn');
 const collapseShare = document.querySelector('.share-container');
 
@@ -41,7 +41,7 @@ const openCollapsable2 = () => {
 
 
 clickShare.addEventListener('click', openCollapsable2);
-
+*/
 
 //FUNCIONES COLORES
 
@@ -57,6 +57,8 @@ function changeColorTheme(event) {
   card.classList.remove('theme-colors3');
 
   card.classList.add(`theme-colors${event.currentTarget.value}`);
+  const resultColorValue = event.currentTarget.value
+  return resultColorValue;
 }
 
 clickTheme1.addEventListener('click', changeColorTheme);
@@ -174,7 +176,6 @@ changeGithub.addEventListener('keyup', (event) => writeGithubfun(event.currentTa
 const resetButton = document.querySelector('.js__button');
 
 function resetCard() {
-  console.log('funciona')
   writeName.innerHTML = defaultElement.name;
   writeJob.innerHTML = defaultElement.job;
   changeMail.value = defaultElement.email;
@@ -258,3 +259,48 @@ function fakeFileClick() {
  */
 uploadBtn.addEventListener('click', fakeFileClick);
 fileField.addEventListener('change', getImage);
+
+//PETICIONES AL SERVIDOR
+
+const shareUrl = document.querySelector('.js__response');
+const clickShare = document.querySelector('.collapsebtn');
+const themeRadio = document.querySelectorAll('.js__theme__radio');
+
+function writeObject(){
+  const objectForm = {};
+  for (let color of themeRadio) {
+    if(color.checked) {
+      objectForm.palette = color.value;
+    }
+  }
+  objectForm.name = changeName.value;
+  objectForm.job = changeJob.value;
+  objectForm.phone = changePhone.value;
+  objectForm.email = changeMail.value;
+  objectForm.linkedin = changeLinkedin.value;
+  objectForm.github = changeGithub.value;
+  objectForm.photo = fr.result;
+
+  return objectForm;
+}
+
+function sendRequest(){
+  fetch("https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/", {
+    method: 'POST',
+    body: JSON.stringify(writeObject()),
+    headers: {
+      'content-type': 'application/json'
+    },
+  })
+    .then(function(resp) { return resp.json(); })
+    .then(data => {
+      shareUrl.innerHTML = '<a class="share-link-url" target="__blank" href=' + data.cardURL + '>' + data.cardURL + '</a>';
+    });
+}
+
+clickShare.addEventListener('click',sendRequest);
+
+
+
+
+
