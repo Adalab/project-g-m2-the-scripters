@@ -2,6 +2,7 @@
 
 console.log('>> Ready :)');
 
+
 //FUNCIONES COLLAPSABLES
 
 //Seleccionamos de manera global los tres collapsables
@@ -287,6 +288,8 @@ function writeObject(){
   return objectForm;
 }
 
+let cardUrl = '';
+
 function sendRequest(){
   fetch("https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/", {
     method: 'POST',
@@ -297,13 +300,24 @@ function sendRequest(){
   })
     .then(function(resp) { return resp.json(); })
     .then(data => {
-      shareUrl.innerHTML = '<a class="share-link-url" target="__blank" href=' + data.cardURL + '>' + data.cardURL + '</a>';
+      cardUrl = data.cardURL;
+      shareUrl.innerHTML = '<a class="share-link-url" target="__blank" href=' + cardUrl + '>' + cardUrl + '</a>';
     });
 }
 
 clickShare.addEventListener('click',sendRequest);
 
 
+// FUNCIONALIDAD DEL BOTÓN TWITTER
 
+const buttonTwitter = document.querySelector('.js__button-Twitter');
 
+function openTwitter ()  {
+  const userUrl = cardUrl;
+  const twitterText = '¡Hola! Aquí tienes mi tarjeta de contacto. No te olvides de llamarme. Saludos!';
+  const hashtags = 'adalab,the-scripters,js';
+  buttonTwitter.href = 'https://twitter.com/intent/tweet?url='+encodeURIComponent(userUrl)+'&text='+encodeURIComponent(twitterText)+'&hashtags='+encodeURIComponent(hashtags);
+}
+
+buttonTwitter.addEventListener('click', openTwitter);
 
