@@ -2,6 +2,7 @@
 
 console.log('>> Ready :)');
 
+const imgCard = document.querySelector ('#img');
 
 //FUNCIONES COLLAPSABLES
 
@@ -12,7 +13,7 @@ const collapsables = document.querySelectorAll('.js__collapsable');
 const openCollapsable = (event) => {
   //guardamos en una variable el padre donde ocurre el evento
   const selectedCollapsable = event.currentTarget.parentElement;
-//recorremos todos los collapsables
+  //recorremos todos los collapsables
   for (let i = 0; i < collapsables.length; i++) {
     //recogemos el padre del collapsable activo en el bucle
     const parentElement = collapsables[i].parentElement;
@@ -25,7 +26,7 @@ const openCollapsable = (event) => {
       parentElement.classList.add('collapsed');
     }
   }
-}
+};
 
 for (let i = 0; i < collapsables.length; i++) {
   collapsables[i].addEventListener('click', openCollapsable);
@@ -58,7 +59,8 @@ function changeColorTheme(value) {
   card.classList.remove('theme-colors3');
 
   card.classList.add(`theme-colors${value}`);
-  const resultColorValue = value
+  const resultColorValue = value;
+  localStorage.setItem('color', resultColorValue);
   return resultColorValue;
 }
 
@@ -84,13 +86,14 @@ const defaultElement = {
   imgCard: `${backgroundImg}`,
   previewImage: `url(${backgroundImg})`,
 
-}
+};
 
 function changingName() {
   const inputValue = changeName.value;
   if (changeName.value === '') {
     writeName.innerHTML = defaultElement.name;
   } else {
+    localStorage.setItem('name', inputValue);
     writeName.innerHTML = inputValue;
   }
   imgCard.alt= inputValue;
@@ -106,6 +109,7 @@ function changingJob() {
   if (changeJob.value === '') {
     writeJob.innerHTML = defaultElement.job;
   } else {
+    localStorage.setItem('job', inputValue);
     writeJob.innerHTML = inputValue;
   }
 }
@@ -125,11 +129,12 @@ const writeGithub = document.querySelector('.js__icon-github');
 
 function writeMailfun (inputValue) {
   writeMail.href ='mailto: ' + inputValue;
-    if (inputValue === '') {
-      writeMail.classList.add('hidden');
-    } else {
-      writeMail.classList.remove('hidden');
-    }
+  if (inputValue === '') {
+    writeMail.classList.add('hidden');
+  } else {
+    localStorage.setItem('mail', inputValue);
+    writeMail.classList.remove('hidden');
+  }
 }
 
 function writePhonefun (inputValue) {
@@ -137,6 +142,7 @@ function writePhonefun (inputValue) {
   if (inputValue === '') {
     writePhone.classList.add('hidden');
   } else {
+    localStorage.setItem('phone', inputValue);
     writePhone.classList.remove('hidden');
   }
 }
@@ -152,6 +158,7 @@ function writeLikedinfun (inputValue) {
   if (inputValue === '') {
     writeLinkedin.classList.add('hidden');
   } else {
+    localStorage.setItem('linkedin', inputValue);
     writeLinkedin.classList.remove('hidden');
   }
 }
@@ -161,12 +168,14 @@ function writeGithubfun (inputValue) {
   if (inputValue.includes('@')) {
     newInputValue = inputValue.replace('@', '');
   } else {
+    localStorage.setItem('github', inputValue);
     newInputValue = inputValue;
   }
   writeGithub.href = 'https://github.com/' + newInputValue;
   if (inputValue === '') {
     writeGithub.classList.add('hidden');
   } else {
+    localStorage.setItem('github', inputValue);
     writeGithub.classList.remove('hidden');
   }
 }
@@ -181,7 +190,6 @@ changeGithub.addEventListener('keyup', (event) => writeGithubfun(event.currentTa
 
 const imageCardContainer = document.querySelector ('.section1__image');
 const previewImage = document.querySelector ('.form-photo-preview');
-const imgCard = document.querySelector ('#img');
 
 imageCardContainer.style.backgroundImage = `url(${backgroundImg})`;
 imgCard.src=`${backgroundImg}`;
@@ -245,6 +253,7 @@ function writeImage() {
   profileImage.style.backgroundImage = `url(${fr.result})`;
   profilePreview.style.backgroundImage = `url(${fr.result})`;
   imgCard.src=`${fr.result}`;
+  localStorage.setItem('image', fr.result);
 }
 
 
@@ -253,7 +262,7 @@ function writeImage() {
  * que está oculto
  */
 function fakeFileClick() {
- fileField.click();
+  fileField.click();
 }
 
 /**
