@@ -16,7 +16,6 @@ const writeGithub = document.querySelector('.js__icon-github');
 const card = document.querySelector('.section1__card');
 const themeRadio = document.querySelectorAll('.js__theme__radio');
 const clickTheme1 = document.querySelector('.theme__radio1');
-console.log(clickTheme1);
 const clickTheme2 = document.querySelector('.theme__radio2');
 const clickTheme3 = document.querySelector('.theme__radio3');
 let resultColorValue;
@@ -26,7 +25,6 @@ if (localStorage.getItem('color')) {
   savedData = localStorage.getItem('color');
   changeColorTheme(savedData);
   resultColorValue = savedData;
-  console.log(savedData)
   if(savedData === '1') {
     clickTheme1.setAttribute('checked', true);
     clickTheme2.removeAttribute('checked', false);
@@ -45,14 +43,6 @@ if (localStorage.getItem('color')) {
   clickTheme2.removeAttribute('checked', false);
   clickTheme3.removeAttribute('checked', false);
 }
-
-/*if (localStorage.getItem('theme-radio')) {
-  savedData = localStorage.getItem('theme-radio');
-  changeColorTheme(savedData);
-  resultColorValue = savedData;
-  for (let = 0; i < themeRadio.length; i++)
-  theme-radio[resultColorValue].checked === true;
-}*/
 
 if (localStorage.getItem('name')) {
   savedData = localStorage.getItem('name');
@@ -95,7 +85,6 @@ if (localStorage.getItem('github')) {
   changeGithub.value = savedData;
   writeGithubfun();
 }
-
 
 //FUNCIONES COLLAPSABLES
 
