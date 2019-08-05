@@ -1,7 +1,5 @@
 'use strict';
 
-console.log('>> Ready :)');
-
 const imgCard = document.querySelector ('#img');
 const changeName = document.querySelector('.js__form-name');
 const writeName = document.querySelector('.js__title');
@@ -15,8 +13,46 @@ const changeLinkedin = document.querySelector('.js__form-linkedin');
 const writeLinkedin = document.querySelector('.js__icon-linkedin');
 const changeGithub = document.querySelector('.js__form-github');
 const writeGithub = document.querySelector('.js__icon-github');
-
+const card = document.querySelector('.section1__card');
+const themeRadio = document.querySelectorAll('.js__theme__radio');
+const clickTheme1 = document.querySelector('.theme__radio1');
+console.log(clickTheme1);
+const clickTheme2 = document.querySelector('.theme__radio2');
+const clickTheme3 = document.querySelector('.theme__radio3');
+let resultColorValue;
 let savedData;
+
+if (localStorage.getItem('color')) {
+  savedData = localStorage.getItem('color');
+  changeColorTheme(savedData);
+  resultColorValue = savedData;
+  console.log(savedData)
+  if(savedData === '1') {
+    clickTheme1.setAttribute('checked', true);
+    clickTheme2.removeAttribute('checked', false);
+    clickTheme3.removeAttribute('checked', false);
+  } else if (savedData === '2') {
+    clickTheme2.setAttribute('checked', true);
+    clickTheme3.removeAttribute('checked', false);
+    clickTheme1.removeAttribute('checked', false);
+  } else if (savedData === '3'){
+    clickTheme3.setAttribute('checked', true);
+    clickTheme2.removeAttribute('checked', false);
+    clickTheme1.removeAttribute('checked', false);
+  }
+} else {
+  clickTheme1.setAttribute('checked', true);
+  clickTheme2.removeAttribute('checked', false);
+  clickTheme3.removeAttribute('checked', false);
+}
+
+/*if (localStorage.getItem('theme-radio')) {
+  savedData = localStorage.getItem('theme-radio');
+  changeColorTheme(savedData);
+  resultColorValue = savedData;
+  for (let = 0; i < themeRadio.length; i++)
+  theme-radio[resultColorValue].checked === true;
+}*/
 
 if (localStorage.getItem('name')) {
   savedData = localStorage.getItem('name');
@@ -28,6 +64,12 @@ if (localStorage.getItem('job')) {
   savedData = localStorage.getItem('job');
   changeJob.value = savedData;
   changingJob();
+}
+
+if (localStorage.getItem('img')) {
+  savedData = localStorage.getItem('img');
+  changeColorTheme(savedData);
+  resultColorValue = savedData;
 }
 
 if (localStorage.getItem('mail')) {
@@ -98,19 +140,13 @@ clickShare.addEventListener('click', openCollapsable2);
 
 //FUNCIONES COLORES
 
-const clickTheme1 = document.querySelector('.theme__radio1');
-const clickTheme2 = document.querySelector('.theme__radio2');
-const clickTheme3 = document.querySelector('.theme__radio3');
-
-const card = document.querySelector('.section1__card');
-
 function changeColorTheme(value) {
   card.classList.remove('theme-colors1');
   card.classList.remove('theme-colors2');
   card.classList.remove('theme-colors3');
 
   card.classList.add(`theme-colors${value}`);
-  const resultColorValue = value;
+  resultColorValue = value;
   localStorage.setItem('color', resultColorValue);
   return resultColorValue;
 }
@@ -122,10 +158,8 @@ clickTheme3.addEventListener('click', (event) => changeColorTheme(event.currentT
 
 //FUNCION NOMBRE & TRABAJO
 
-
-
 const defaultElement = {
-  color : 1,
+  color :'',
   name : 'Nombre Apellido',
   job: 'Front-end developer',
   email: '',
@@ -135,7 +169,6 @@ const defaultElement = {
   imageCardContainer: `url(${backgroundImg})`,
   imgCard: `${backgroundImg}`,
   previewImage: `url(${backgroundImg})`,
-
 };
 
 function changingName() {
@@ -258,7 +291,6 @@ function resetCard() {
 
 resetButton.addEventListener('click', resetCard);
 
-
 //IMAGEN PREVISUALIZACIÓN
 
 const fr = new FileReader();
@@ -318,7 +350,7 @@ fileField.addEventListener('change', getImage);
 
 const shareUrl = document.querySelector('.js__response');
 const clickShare = document.querySelector('.collapsebtn');
-const themeRadio = document.querySelectorAll('.js__theme__radio');
+
 
 function writeObject(){
   const objectForm = {};
