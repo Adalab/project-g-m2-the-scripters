@@ -3,6 +3,57 @@
 console.log('>> Ready :)');
 
 const imgCard = document.querySelector ('#img');
+const changeName = document.querySelector('.js__form-name');
+const writeName = document.querySelector('.js__title');
+const changeJob = document.querySelector('.js__form-job');
+const writeJob = document.querySelector('.js__job');
+const changeMail = document.querySelector('.js__form-mail');
+const writeMail = document.querySelector('.js__icon-mail');
+const changePhone = document.querySelector('.js__form-phone');
+const writePhone = document.querySelector('.js__icon-phone');
+const changeLinkedin = document.querySelector('.js__form-linkedin');
+const writeLinkedin = document.querySelector('.js__icon-linkedin');
+const changeGithub = document.querySelector('.js__form-github');
+const writeGithub = document.querySelector('.js__icon-github');
+
+let savedData;
+
+if (localStorage.getItem('name')) {
+  savedData = localStorage.getItem('name');
+  changeName.value = savedData;
+  changingName();
+}
+
+if (localStorage.getItem('job')) {
+  savedData = localStorage.getItem('job');
+  changeJob.value = savedData;
+  changingJob();
+}
+
+if (localStorage.getItem('mail')) {
+  savedData = localStorage.getItem('mail');
+  changeMail.value = savedData;
+  writeMailfun();
+}
+
+if (localStorage.getItem('phone')) {
+  savedData = localStorage.getItem('phone');
+  changePhone.value = savedData;
+  writePhonefun();
+}
+
+if (localStorage.getItem('linkedin')) {
+  savedData = localStorage.getItem('linkedin');
+  changeLinkedin.value = savedData;
+  writeLikedinfun();
+}
+
+if (localStorage.getItem('github')) {
+  savedData = localStorage.getItem('github');
+  changeGithub.value = savedData;
+  writeGithubfun();
+}
+
 
 //FUNCIONES COLLAPSABLES
 
@@ -71,8 +122,7 @@ clickTheme3.addEventListener('click', (event) => changeColorTheme(event.currentT
 
 //FUNCION NOMBRE & TRABAJO
 
-const changeName = document.querySelector('.js__form-name');
-const writeName = document.querySelector('.js__title');
+
 
 const defaultElement = {
   color : 1,
@@ -100,10 +150,6 @@ function changingName() {
 }
 changeName.addEventListener('keyup', changingName);
 
-
-const changeJob = document.querySelector('.js__form-job');
-const writeJob = document.querySelector('.js__job');
-
 function changingJob() {
   const inputValue = changeJob.value;
   if (changeJob.value === '') {
@@ -118,16 +164,8 @@ changeJob.addEventListener('keyup', changingJob);
 
 //FUNCION REDES SOCIALES
 
-const changeMail = document.querySelector('.js__form-mail');
-const writeMail = document.querySelector('.js__icon-mail');
-const changePhone = document.querySelector('.js__form-phone');
-const writePhone = document.querySelector('.js__icon-phone');
-const changeLinkedin = document.querySelector('.js__form-linkedin');
-const writeLinkedin = document.querySelector('.js__icon-linkedin');
-const changeGithub = document.querySelector('.js__form-github');
-const writeGithub = document.querySelector('.js__icon-github');
-
 function writeMailfun (inputValue) {
+  inputValue = changeMail.value;
   writeMail.href ='mailto: ' + inputValue;
   if (inputValue === '') {
     writeMail.classList.add('hidden');
@@ -138,6 +176,7 @@ function writeMailfun (inputValue) {
 }
 
 function writePhonefun (inputValue) {
+  inputValue = changePhone.value;
   writePhone.href ='tel: ' + inputValue;
   if (inputValue === '') {
     writePhone.classList.add('hidden');
@@ -148,6 +187,7 @@ function writePhonefun (inputValue) {
 }
 
 function writeLikedinfun (inputValue) {
+  inputValue = changeLinkedin.value;
   let newInputValue = '';
   if (inputValue.includes('@')) {
     newInputValue = inputValue.replace('@', '');
@@ -164,6 +204,7 @@ function writeLikedinfun (inputValue) {
 }
 
 function writeGithubfun (inputValue) {
+  inputValue = changeGithub.value;
   let newInputValue = '';
   if (inputValue.includes('@')) {
     newInputValue = inputValue.replace('@', '');
