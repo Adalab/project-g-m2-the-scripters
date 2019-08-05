@@ -26,11 +26,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 100px 60px 60px;
+  padding: 60px 0 30px;
   box-sizing: border-box;
+  background-color: $grey-landing;
 }
 
 @media all and (min-width: 768px){
+
+  .page__flex{
+    padding: 100px 60px 60px;
+  }
   .landing__title{
     width: 420px;
     padding-top: 107px;
