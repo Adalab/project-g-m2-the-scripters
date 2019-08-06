@@ -61,8 +61,6 @@ else{
   previewImage.style.backgroundImage = `url(${backgroundImg})`;
 }
 
-
-
 if (localStorage.getItem('mail')) {
   savedData = localStorage.getItem('mail');
   changeMail.value = savedData;
@@ -149,13 +147,13 @@ clickTheme3.addEventListener('click', (event) => changeColorTheme(event.currentT
 //FUNCION NOMBRE & TRABAJO
 
 const defaultElement = {
-  color :'1',
+  color : '1',
   name : 'Nombre Apellido',
   job: 'Front-end developer',
   email: '',
-  phone:'',
-  linkedin:'',
-  github:'',
+  phone: '',
+  linkedin: '',
+  github: '',
   imageCardContainer: `url(${backgroundImg})`,
   imgCard: `${backgroundImg}`,
   previewImage: `url(${backgroundImg})`,
@@ -232,7 +230,6 @@ function writeGithubfun (inputValue) {
   if (inputValue.includes('@')) {
     newInputValue = inputValue.replace('@', '');
   } else {
-    localStorage.setItem('github', inputValue);
     newInputValue = inputValue;
   }
   writeGithub.href = 'https://github.com/' + newInputValue;
@@ -244,34 +241,51 @@ function writeGithubfun (inputValue) {
   }
 }
 
-//creamos una función anónima como handler donde ejecutamos la función que queremos con sólo el value
 changeMail.addEventListener('keyup', (event) => writeMailfun(event.currentTarget.value));
 changePhone.addEventListener('keyup', (event) => writePhonefun(event.currentTarget.value));
 changeLinkedin.addEventListener('keyup', (event) => writeLikedinfun(event.currentTarget.value));
 changeGithub.addEventListener('keyup', (event) => writeGithubfun(event.currentTarget.value));
 
-//IMAGEN POR DEFECTO
-
-
-
 //RESET
 const resetButton = document.querySelector('.js__button');
 
 function resetCard() {
+  localStorage.removeItem('name');
   writeName.innerHTML = defaultElement.name;
+
+  localStorage.removeItem('job');
   writeJob.innerHTML = defaultElement.job;
+
+  localStorage.removeItem('mail');
   changeMail.value = defaultElement.email;
+
+  localStorage.removeItem('phone');
   changePhone.value = defaultElement.phone;
+
+  localStorage.removeItem('linkedin');
   changeLinkedin.value = defaultElement.linkedin;
+
+  localStorage.removeItem('github');
   changeGithub.value = defaultElement.github;
+
   writeMailfun(defaultElement.email);
   writePhonefun(defaultElement.phone);
   writeLikedinfun(defaultElement.linkedin);
   writeGithubfun(defaultElement.github);
+
+  localStorage.removeItem('image');
   imageCardContainer.style.backgroundImage = defaultElement.imageCardContainer ;
   imgCard.src= defaultElement.imgCard;
   previewImage.style.backgroundImage = defaultElement.previewImage;
-  changeColorTheme(defaultElement.color);
+
+  localStorage.removeItem('color');
+  if(localStorage.removeItem('color') !== '') {
+    changeColorTheme(defaultElement.color);
+    clickTheme1.removeAttribute('checked', false);
+    clickTheme2.removeAttribute('checked', false);
+    clickTheme3.removeAttribute('checked', false);
+    clickTheme1.setAttribute('checked', true);
+  }
 }
 
 resetButton.addEventListener('click', resetCard);
@@ -281,7 +295,6 @@ resetButton.addEventListener('click', resetCard);
 
 const shareUrl = document.querySelector('.js__response');
 const clickShare = document.querySelector('.collapsebtn');
-
 
 function writeObject(){
   const objectForm = {};
@@ -319,7 +332,6 @@ function sendRequest(){
 }
 
 clickShare.addEventListener('click',sendRequest);
-
 
 // FUNCIONALIDAD DEL BOTÓN TWITTER
 
