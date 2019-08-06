@@ -245,20 +245,42 @@ changeGithub.addEventListener('keyup', (event) => writeGithubfun(event.currentTa
 const resetButton = document.querySelector('.js__button');
 
 function resetCard() {
+  localStorage.removeItem('name');
   writeName.innerHTML = defaultElement.name;
+ 
+  localStorage.removeItem('job');
   writeJob.innerHTML = defaultElement.job;
+ 
+  localStorage.removeItem('mail');
   changeMail.value = defaultElement.email;
+ 
+  localStorage.removeItem('phone');
   changePhone.value = defaultElement.phone;
+ 
+  localStorage.removeItem('linkedin');
   changeLinkedin.value = defaultElement.linkedin;
+ 
+  localStorage.removeItem('github');
   changeGithub.value = defaultElement.github;
+ 
   writeMailfun(defaultElement.email);
   writePhonefun(defaultElement.phone);
   writeLikedinfun(defaultElement.linkedin);
   writeGithubfun(defaultElement.github);
+ 
+  localStorage.removeItem('image');
   imageCardContainer.style.backgroundImage = defaultElement.imageCardContainer ;
   imgCard.src= defaultElement.imgCard;
   previewImage.style.backgroundImage = defaultElement.previewImage;
-  changeColorTheme(defaultElement.color);
+ 
+  localStorage.removeItem('color');
+  if(localStorage.removeItem('color') !== '') {
+    changeColorTheme(defaultElement.color);
+    clickTheme1.removeAttribute('checked', false);
+    clickTheme2.removeAttribute('checked', false);
+    clickTheme3.removeAttribute('checked', false);
+    clickTheme1.setAttribute('checked', true);
+  }
 }
 
 resetButton.addEventListener('click', resetCard);
