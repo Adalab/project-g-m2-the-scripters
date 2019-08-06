@@ -1,8 +1,8 @@
 .landing__header {
   background-color: $grey-landing;
   display: flex;
-  justify-content: center;
-  // padding-top: 95px;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .landing__title {
@@ -15,6 +15,7 @@
   height: 1px;
   overflow: hidden;
   margin:0;
+
 }
 
 .page__flex{
@@ -22,9 +23,17 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  padding: 60px 0 30px;
+  box-sizing: border-box;
+  background-color: $grey-landing;
 }
 
 @media all and (min-width: 768px){
+
+  .page__flex{
+    padding: 100px 60px 60px;
+  }
   .landing__title{
     width: 420px;
     padding-top: 107px;
