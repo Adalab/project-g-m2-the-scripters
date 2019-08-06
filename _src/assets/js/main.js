@@ -29,21 +29,21 @@ if (localStorage.getItem('color')) {
   resultColorValue = savedData;
   if(savedData === '1') {
     clickTheme1.setAttribute('checked', true);
-    clickTheme2.removeAttribute('checked', false);
-    clickTheme3.removeAttribute('checked', false);
+    //clickTheme2.removeAttribute('checked', false);
+    //clickTheme3.removeAttribute('checked', false);
   } else if (savedData === '2') {
     clickTheme2.setAttribute('checked', true);
-    clickTheme3.removeAttribute('checked', false);
-    clickTheme1.removeAttribute('checked', false);
+    //clickTheme3.removeAttribute('checked', false);
+    //clickTheme1.removeAttribute('checked', false);
   } else if (savedData === '3'){
     clickTheme3.setAttribute('checked', true);
-    clickTheme2.removeAttribute('checked', false);
-    clickTheme1.removeAttribute('checked', false);
+    //clickTheme2.removeAttribute('checked', false);
+    //clickTheme1.removeAttribute('checked', false);
   }
 } else {
   clickTheme1.setAttribute('checked', true);
-  clickTheme2.removeAttribute('checked', false);
-  clickTheme3.removeAttribute('checked', false);
+  //clickTheme2.removeAttribute('checked', false);
+  //clickTheme3.removeAttribute('checked', false);
 }
 
 if (localStorage.getItem('name')) {
