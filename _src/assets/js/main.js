@@ -152,9 +152,9 @@ const defaultElement = {
   name : 'Nombre Apellido',
   job: 'Front-end developer',
   email: '',
-  phone:'',
-  linkedin:'',
-  github:'',
+  phone: '',
+  linkedin: '',
+  github: '',
   imageCardContainer: `url(${backgroundImg})`,
   imgCard: `${backgroundImg}`,
   previewImage: `url(${backgroundImg})`,
@@ -231,7 +231,6 @@ function writeGithubfun (inputValue) {
   if (inputValue.includes('@')) {
     newInputValue = inputValue.replace('@', '');
   } else {
-    localStorage.setItem('github', inputValue);
     newInputValue = inputValue;
   }
   writeGithub.href = 'https://github.com/' + newInputValue;
@@ -243,15 +242,10 @@ function writeGithubfun (inputValue) {
   }
 }
 
-//creamos una función anónima como handler donde ejecutamos la función que queremos con sólo el value
 changeMail.addEventListener('keyup', (event) => writeMailfun(event.currentTarget.value));
 changePhone.addEventListener('keyup', (event) => writePhonefun(event.currentTarget.value));
 changeLinkedin.addEventListener('keyup', (event) => writeLikedinfun(event.currentTarget.value));
 changeGithub.addEventListener('keyup', (event) => writeGithubfun(event.currentTarget.value));
-
-//IMAGEN POR DEFECTO
-
-
 
 //RESET
 const resetButton = document.querySelector('.js__button');
@@ -293,7 +287,6 @@ function resetCard() {
     clickTheme3.removeAttribute('checked', false);
     clickTheme1.setAttribute('checked', true);
   }
-
 }
 
 resetButton.addEventListener('click', resetCard);
@@ -358,7 +351,6 @@ fileField.addEventListener('change', getImage);
 const shareUrl = document.querySelector('.js__response');
 const clickShare = document.querySelector('.collapsebtn');
 
-
 function writeObject(){
   const objectForm = {};
   for (let color of themeRadio) {
@@ -395,7 +387,6 @@ function sendRequest(){
 }
 
 clickShare.addEventListener('click',sendRequest);
-
 
 // FUNCIONALIDAD DEL BOTÓN TWITTER
 
