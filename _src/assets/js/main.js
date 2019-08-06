@@ -263,7 +263,7 @@ function resetCard() {
 
 resetButton.addEventListener('click', resetCard);
 
-
+//ABRIR COMPARTIR:
 const clickShare = document.querySelector('.collapsebtn');
 const collapseShare = document.querySelector('.share-container');
 
