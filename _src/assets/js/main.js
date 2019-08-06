@@ -259,12 +259,10 @@ function resetCard() {
   writePhonefun(defaultElement.phone);
   writeLikedinfun(defaultElement.linkedin);
   writeGithubfun(defaultElement.github);
-
   localStorage.removeItem('image');
   imageCardContainer.style.backgroundImage = defaultElement.imageCardContainer ;
   imgCard.src= defaultElement.imgCard;
   previewImage.style.backgroundImage = defaultElement.previewImage;
-
   localStorage.removeItem('color');
   if(localStorage.removeItem('color') !== '') {
     changeColorTheme(defaultElement.color);
