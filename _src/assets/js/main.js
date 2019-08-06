@@ -1,6 +1,5 @@
 'use strict';
 
-const imgCard = document.querySelector ('#img');
 const changeName = document.querySelector('.js__form-name');
 const writeName = document.querySelector('.js__title');
 const changeJob = document.querySelector('.js__form-job');
@@ -18,6 +17,9 @@ const themeRadio = document.querySelectorAll('.js__theme__radio');
 const clickTheme1 = document.querySelector('.theme__radio1');
 const clickTheme2 = document.querySelector('.theme__radio2');
 const clickTheme3 = document.querySelector('.theme__radio3');
+const imageCardContainer = document.querySelector ('.section1__image');
+const previewImage = document.querySelector ('.form-photo-preview');
+const imgCard = document.querySelector ('#img');
 let resultColorValue;
 let savedData;
 
@@ -56,11 +58,19 @@ if (localStorage.getItem('job')) {
   changingJob();
 }
 
-if (localStorage.getItem('img')) {
-  savedData = localStorage.getItem('img');
-  changeColorTheme(savedData);
-  resultColorValue = savedData;
+if (localStorage.getItem('image') !== null) {
+  savedData = localStorage.getItem('image');
+  imageCardContainer.style.backgroundImage = `url(${savedData})`;
+  imgCard.src=`${savedData}`;
+  previewImage.style.backgroundImage = `url(${savedData})`;
 }
+else{
+  imageCardContainer.style.backgroundImage = `url(${backgroundImg})`;
+  imgCard.src=`${backgroundImg}`;
+  previewImage.style.backgroundImage = `url(${backgroundImg})`;
+}
+
+
 
 if (localStorage.getItem('mail')) {
   savedData = localStorage.getItem('mail');
@@ -148,7 +158,7 @@ clickTheme3.addEventListener('click', (event) => changeColorTheme(event.currentT
 //FUNCION NOMBRE & TRABAJO
 
 const defaultElement = {
-  color :'',
+  color :'1',
   name : 'Nombre Apellido',
   job: 'Front-end developer',
   email: '',
@@ -251,12 +261,7 @@ changeGithub.addEventListener('keyup', (event) => writeGithubfun(event.currentTa
 
 //IMAGEN POR DEFECTO
 
-const imageCardContainer = document.querySelector ('.section1__image');
-const previewImage = document.querySelector ('.form-photo-preview');
 
-imageCardContainer.style.backgroundImage = `url(${backgroundImg})`;
-imgCard.src=`${backgroundImg}`;
-previewImage.style.backgroundImage = `url(${backgroundImg})`;
 
 //RESET
 const resetButton = document.querySelector('.js__button');
@@ -362,7 +367,7 @@ function writeObject(){
 let cardUrl = '';
 
 function sendRequest(){
-  fetch("https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/", {
+  fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
     method: 'POST',
     body: JSON.stringify(writeObject()),
     headers: {
