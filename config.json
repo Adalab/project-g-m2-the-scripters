@@ -18,6 +18,7 @@
 	"js": {
 		"src": [
       "_src/assets/js/default-image.js",
+      "_src/assets/js/get-avatar.js",
 			"_src/assets/js/main.js"
 		],
 		"dest": "public/assets/js/",
