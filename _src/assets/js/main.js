@@ -112,19 +112,6 @@ const openCollapsable = (event) => {
 for (let i = 0; i < collapsables.length; i++) {
   collapsables[i].addEventListener('click', openCollapsable);
 }
-/*
-const clickShare = document.querySelector('.collapsebtn');
-const collapseShare = document.querySelector('.share-container');
-
-const openCollapsable2 = () => {
-  event.preventDefault ();
-  collapseShare.classList.toggle ('hidden');
-  clickShare.classList.add('button-Create-after');
-}
-
-
-clickShare.addEventListener('click', openCollapsable2);
-*/
 
 //FUNCIONES COLORES
 
@@ -290,11 +277,19 @@ function resetCard() {
 
 resetButton.addEventListener('click', resetCard);
 
+//ABRIR COMPARTIR:
+const clickShare = document.querySelector('.collapsebtn');
+const collapseShare = document.querySelector('.share-container');
+
+const openCollapsable2 = () => {
+  event.preventDefault ();
+  collapseShare.classList.toggle ('hidden');
+  clickShare.classList.add('button-Create-after');
+};
 
 //PETICIONES AL SERVIDOR
 
 const shareUrl = document.querySelector('.js__response');
-const clickShare = document.querySelector('.collapsebtn');
 
 function writeObject(){
   const objectForm = {};
@@ -329,6 +324,7 @@ function sendRequest(){
       cardUrl = data.cardURL;
       shareUrl.innerHTML = '<a class="share-link-url" target="__blank" href=' + cardUrl + '>' + cardUrl + '</a>';
     });
+  openCollapsable2();
 }
 
 clickShare.addEventListener('click',sendRequest);
@@ -345,4 +341,6 @@ function openTwitter ()  {
 }
 
 buttonTwitter.addEventListener('click', openTwitter);
+
+
 
