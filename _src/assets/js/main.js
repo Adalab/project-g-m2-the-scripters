@@ -89,6 +89,8 @@ if (localStorage.getItem('github')) {
 
 //Seleccionamos de manera global los tres collapsables
 const collapsables = document.querySelectorAll('.js__collapsable');
+const collapseShare = document.querySelector('.share-container');
+const submitContainer = document.querySelector('.js__submit-container');
 
 //Creamos la función handler genérica
 const openCollapsable = (event) => {
@@ -108,6 +110,7 @@ const openCollapsable = (event) => {
     }
   }
 };
+
 
 for (let i = 0; i < collapsables.length; i++) {
   collapsables[i].addEventListener('click', openCollapsable);
@@ -277,7 +280,6 @@ resetButton.addEventListener('click', resetCard);
 
 //ABRIR COMPARTIR:
 const clickShare = document.querySelector('.collapsebtn');
-const collapseShare = document.querySelector('.share-container');
 
 const openCollapsable2 = () => {
   event.preventDefault ();
