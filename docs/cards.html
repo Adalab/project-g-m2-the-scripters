@@ -35,8 +35,8 @@
                                      <h3 class="section1__career js__job">Front-end developer</h3>
 
                                 </div>
-                                <div class="section1__image" style="background-image: url('https://via.placeholder.com/240/438792/fff?text=Foto+de+muestra')">
-                                    <img src="https://via.placeholder.com/240/200" alt="Nombre Apellido">
+                                <div class="section1__image js__profile-image" style="background-image: url()">
+                                    <img id="img" class="section1__image-img" src="" alt="Nombre Apellido">
                                 </div>
                                 <ul class="section1__links">
                                     <l1 class="section1__element"> <a href="" class="section1__link js__icon-mail hidden">
@@ -49,12 +49,12 @@
           </a>
 
                                     </l1>
-                                    <l1 class="section1__element"> <a href="" class="section1__link js__icon-linkedin hidden">
+                                    <l1 class="section1__element"> <a href="" target="__blank" class="section1__link js__icon-linkedin hidden">
             <i class="fab fa-linkedin-in section1__link__image"></i>
           </a>
 
                                     </l1>
-                                    <l1 class="section1__element"> <a href="" class="section1__link js__icon-github hidden">
+                                    <l1 class="section1__element"> <a href="" target="__blank" class="section1__link js__icon-github hidden">
             <i class="fab fa-github-alt section1__link__image"></i>
           </a>
 
@@ -78,8 +78,8 @@
                                         <div class="theme-container">
                                             <div class="theme">
                                                 <label for="t1" class="theme__row">
-                                                    <input type="radio" class="theme__radio theme__radio1" id="t1" name="theme"
-                                                    value="1" checked />
+                                                    <input type="radio" class="theme__radio theme__radio1 js__theme__radio"
+                                                    id="t1" name="palette" value="1" />
                                                     <ul class="colors">
                                                         <li class="color" style="background-color:#114e4e">Eden</li>
                                                         <li class="color" style="background-color:#438792">Wedgewood</li>
@@ -89,8 +89,8 @@
                                             </div>
                                             <div class="theme">
                                                 <label for="t2" class="theme__row">
-                                                    <input type="radio" class="theme__radio theme__radio2" id="t2" name="theme"
-                                                    value="2" />
+                                                    <input type="radio" class="theme__radio theme__radio2 js__theme__radio"
+                                                    id="t2" name="palette" value="2" />
                                                     <ul class="colors">
                                                         <li class="color" style="background-color: #420101">Chocolate</li>
                                                         <li class="color" style="background-color: #bd1010">Thunderbird</li>
@@ -100,8 +100,8 @@
                                             </div>
                                             <div class="theme">
                                                 <label for="t3" class="theme__row">
-                                                    <input type="radio" class="theme__radio theme__radio3" id="t3" name="theme"
-                                                    value="3" />
+                                                    <input type="radio" class="theme__radio theme__radio3 js__theme__radio"
+                                                    id="t3" name="palette" value="3" />
                                                     <ul class="colors">
                                                         <li class="color" style="background-color: #3e5b65">Fiord</li>
                                                         <li class="color" style="background-color: #eab052">Ronchi</li>
@@ -122,7 +122,7 @@
                                         <div class="form__fill-input">
                                             <label for="form-name" class="form-label">Nombre completo</label>
                                             <input type="text" class="form-text js__form-name"
-                                            id="form-name" name="full_name" placeholder="Ej: Sally Jill" required />
+                                            id="form-name" name="name" placeholder="Ej: Sally Jill" required />
                                         </div>
                                         <div class="form__fill-input">
                                             <label for="form-career" class="form-label">Puesto</label>
@@ -131,10 +131,10 @@
                                         </div>
                                         <div class="form__fill-input">
                                             <label for="form-photo" class="form-label">Imagen de perfil</label>
-                                            <input type="file" class="form-text form-file hidden"
+                                            <input type="file" class="form-text form-file hidden js__profile-upload-btn"
                                             id="form-photo" name="photo" required />
-                                            <button class="form-photo-button button-addImage-mobile">Añadir imagen</button>
-                                            <div class="form-photo-preview"></div>
+                                            <button class="form-photo-button button-addImage-mobile js__profile-trigger">Añadir imagen</button>
+                                            <div class="form-photo-preview js__profile-preview"></div>
                                         </div>
                                         <div class="form__fill-input">
                                             <label for="form-email" class="form-label">Email</label>
@@ -160,20 +160,22 @@
                                     </div>
                                 </fieldset>
                             </form>
-                            <div class="collapsed">
+                            <div class="js__submit-container collapsed">
                                 <div class="submit-share js__collapsable">
                                      <h4 class="submit-share form-title title-3">Comparte</h4>
 
                                 </div>
                                 <div class="submit-container collapsable-container">
-                                    <button class="button-Create-before collapsebtn" type="submit" form="form">Crear tarjeta</button>
+                                    <button class="button-Create-before collapsebtn js__submit" type="button"
+                                    form="form" id="submit">Crear tarjeta</button>
                                 </div>
-                            </div>
-                            <div class="share-container hidden">
-                                <p class="card-success">La tarjeta ha sido creada:</p>
-                                <p class="share-link">https://awesome-profile-card.com?id=A456DF0001</p>
-                                <button class="button-Twitter"
-                                type="submit">Compartir en twitter</button>
+                                <div class="share-container collapsable-container hidden">
+                                    <p class="card-success">La tarjeta ha sido creada:</p>
+                                    <p class="share-link js__response">https://awesome-profile-card.com?id=A456DF0001</p> <a class="button-Twitter js__button-Twitter"
+                                    href="" target="_blank">
+        Compartir en Twitter</a>
+
+                                </div>
                             </div>
                         </div>
                     </section>
