@@ -351,7 +351,7 @@ buttonTwitter.addEventListener('click', openTwitter);
 //Función tarjeta
 
 function alert() {
-  if(changeName.value !== '' && changeJob.value !== '' && changeMail.value !== '' && changeLinkedin.value !== '' && changeGithub.value !== '' && ${fr.result} !== '') {
+  if(changeName.value !== '' && changeJob.value !== '' && changeMail.value !== '' && changeLinkedin.value !== '' && changeGithub.value !== '') {
     cardMessage.innerHTML = 'La tarjeta ha sido creada:';
   } else {
     cardMessage.innerHTML = 'Todos los campos son obligatorios menos el teléfono';
