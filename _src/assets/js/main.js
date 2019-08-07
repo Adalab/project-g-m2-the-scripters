@@ -19,6 +19,7 @@ const clickTheme2 = document.querySelector('.theme__radio2');
 const clickTheme3 = document.querySelector('.theme__radio3');
 const imageCardContainer = document.querySelector ('.section1__image');
 const previewImage = document.querySelector ('.form-photo-preview');
+const cardMessage = document.querySelector('.js__card-success');
 let resultColorValue;
 let savedData;
 
@@ -347,5 +348,13 @@ function openTwitter ()  {
 
 buttonTwitter.addEventListener('click', openTwitter);
 
+//Función tarjeta
 
-
+function alert() {
+  if(changeName.value !== '' && changeJob.value !== '' && changeMail.value !== '' && changeLinkedin.value !== '' && changeGithub.value !== '' && ${fr.result} !== '') {
+    cardMessage.innerHTML = 'La tarjeta ha sido creada:';
+  } else {
+    cardMessage.innerHTML = 'Todos los campos son obligatorios menos el teléfono';
+  }
+}
+alert();
