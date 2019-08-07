@@ -150,11 +150,13 @@ function changingName() {
   const inputValue = changeName.value;
   if (changeName.value === '') {
     writeName.innerHTML = defaultElement.name;
+    localStorage.removeItem('name');
   } else {
     localStorage.setItem('name', inputValue);
     writeName.innerHTML = inputValue;
   }
   imgCard.alt= inputValue;
+
 }
 changeName.addEventListener('keyup', changingName);
 
@@ -162,6 +164,7 @@ function changingJob() {
   const inputValue = changeJob.value;
   if (changeJob.value === '') {
     writeJob.innerHTML = defaultElement.job;
+    localStorage.removeItem('job');
   } else {
     localStorage.setItem('job', inputValue);
     writeJob.innerHTML = inputValue;
@@ -177,6 +180,7 @@ function writeMailfun (inputValue) {
   writeMail.href ='mailto: ' + inputValue;
   if (inputValue === '') {
     writeMail.classList.add('hidden');
+    localStorage.removeItem('mail');
   } else {
     localStorage.setItem('mail', inputValue);
     writeMail.classList.remove('hidden');
@@ -188,6 +192,7 @@ function writePhonefun (inputValue) {
   writePhone.href ='tel: ' + inputValue;
   if (inputValue === '') {
     writePhone.classList.add('hidden');
+    localStorage.removeItem('phone');
   } else {
     localStorage.setItem('phone', inputValue);
     writePhone.classList.remove('hidden');
@@ -205,6 +210,7 @@ function writeLikedinfun (inputValue) {
   writeLinkedin.href = 'https://www.linkedin.com/in/' + newInputValue;
   if (inputValue === '') {
     writeLinkedin.classList.add('hidden');
+    localStorage.removeItem('linkedin');
   } else {
     localStorage.setItem('linkedin', inputValue);
     writeLinkedin.classList.remove('hidden');
@@ -222,6 +228,7 @@ function writeGithubfun (inputValue) {
   writeGithub.href = 'https://github.com/' + newInputValue;
   if (inputValue === '') {
     writeGithub.classList.add('hidden');
+    localStorage.removeItem('github');
   } else {
     localStorage.setItem('github', inputValue);
     writeGithub.classList.remove('hidden');
