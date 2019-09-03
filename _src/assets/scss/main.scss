@@ -1,17 +1,15 @@
+@import 'core/reset';
 @import 'core/variables';
 @import 'core/settings';
 @import 'core/mixins';
+
 @import 'components/buttons';
+@import 'components/links';
 
-/* LANDING PARTIALS */
-@import 'core/landing-header';
-@import 'core/landing-page';
-
-/* CARDS PARTIALS */
-@import 'core/cards-header';
-@import 'core/cards-page';
-@import 'core/palet-colors';
-@import 'core/collapsables';
-
-/* COMMON FOOTER */
-@import 'core/footer.scss';
+@import 'sections/landing-header';
+@import 'sections/landing-page';
+@import 'sections/cards-header';
+@import 'sections/cards-page';
+@import 'sections/palet-colors';
+@import 'sections/collapsables';
+@import 'sections/footer.scss';
