@@ -9,13 +9,13 @@
 }
 
 .landing__main-title {
-  @include Landing-Title-mobile;
+  @include landing-title-font;
   margin-top: 35px;
   margin-bottom: 0;
 }
 
 .landing__main-text {
-  @include Landing-text-mobile;
+  @include landing-text-font;
   margin-top: 0;
   margin-bottom: 17.8px;
   width: 265px;
@@ -62,7 +62,7 @@
 }
 
 .landing__main-description {
-  @include Landing-listText-mobile;
+  @include landing-list-text-font;
   margin: 0;
 }
 
@@ -85,7 +85,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      @include Landing-StartText;
+      @include landing-link-font;
     }
 }
 

@@ -1,5 +1,5 @@
 // FONTS MIXINS LANDING - MAIN - MOBILE
-@mixin Landing-Title-mobile {
+@mixin landing-title-font {
   font-family: $font-family-Merri;
   font-size: 19.2px;
   font-weight: $font-weight-black;
@@ -7,7 +7,7 @@
   color: $dull-orange;
 }
 
-@mixin Landing-text-mobile {
+@mixin landing-text-font {
   font-family: $font-family-Open;
   font-size: 12.8px;
   font-weight: $font-weight-normal;
@@ -15,7 +15,7 @@
   color: $dark-green-blue;
 }
 
-@mixin Landing-listText-mobile {
+@mixin landing-list-text-font {
   font-family: $font-family-Open;
   font-size: 12.8px;
   font-weight: $font-weight-normal;
@@ -23,7 +23,7 @@
   color: $dark-grey;
 }
 
-@mixin Landing-StartText {
+@mixin landing-link-font {
   font-family: $font-family-Open;
   font-size: 16px;
   font-weight: $font-weight-medium;
