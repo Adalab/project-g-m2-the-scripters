@@ -99,7 +99,6 @@ const openCollapsable = (event) => {
   }
 };
 
-
 for (let i = 0; i < collapsables.length; i++) {
   collapsables[i].addEventListener('click', openCollapsable);
 }
@@ -108,7 +107,6 @@ function changeColorTheme(value) {
   card.classList.remove('theme-colors1');
   card.classList.remove('theme-colors2');
   card.classList.remove('theme-colors3');
-
   card.classList.add(`theme-colors${value}`);
   resultColorValue = value;
   localStorage.setItem('color', resultColorValue);
@@ -142,7 +140,6 @@ function changingName() {
     writeName.innerHTML = inputValue;
   }
   imgCard.alt= inputValue;
-
 }
 changeName.addEventListener('keyup', changingName);
 
@@ -313,7 +310,7 @@ function sendRequest(){
 
 clickShare.addEventListener('click',sendRequest);
 
-const buttonTwitter = document.querySelector('.js__button-Twitter');
+const buttonTwitter = document.querySelector('.js__link-twitter');
 
 function openTwitter ()  {
   const userUrl = cardUrl;
