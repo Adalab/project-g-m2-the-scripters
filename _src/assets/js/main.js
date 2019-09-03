@@ -85,27 +85,16 @@ if (localStorage.getItem('github')) {
   writeGithubfun();
 }
 
-//FUNCIONES COLLAPSABLES
-
-//Seleccionamos de manera global los tres collapsables
 const collapsables = document.querySelectorAll('.js__collapsable');
 const collapseShare = document.querySelector('.share-container');
-const submitContainer = document.querySelector('.js__submit-container');
 
-//Creamos la función handler genérica
 const openCollapsable = (event) => {
-  //guardamos en una variable el padre donde ocurre el evento
   const selectedCollapsable = event.currentTarget.parentElement;
-  //recorremos todos los collapsables
   for (let i = 0; i < collapsables.length; i++) {
-    //recogemos el padre del collapsable activo en el bucle
     const parentElement = collapsables[i].parentElement;
-    //si el padre activo en el bucle coincide con el padre del evento
     if (selectedCollapsable === parentElement) {
-      //si está abierto se cierra y si no se abre
       selectedCollapsable.classList.toggle('collapsed');
     } else {
-      //si no coincide se cierra
       parentElement.classList.add('collapsed');
     }
   }
@@ -115,8 +104,6 @@ const openCollapsable = (event) => {
 for (let i = 0; i < collapsables.length; i++) {
   collapsables[i].addEventListener('click', openCollapsable);
 }
-
-//FUNCIONES COLORES
 
 function changeColorTheme(value) {
   card.classList.remove('theme-colors1');
@@ -132,9 +119,6 @@ function changeColorTheme(value) {
 clickTheme1.addEventListener('click', (event) => changeColorTheme(event.currentTarget.value));
 clickTheme2.addEventListener('click', (event) => changeColorTheme(event.currentTarget.value));
 clickTheme3.addEventListener('click', (event) => changeColorTheme(event.currentTarget.value));
-
-
-//FUNCION NOMBRE & TRABAJO
 
 const defaultElement = {
   color : '1',
@@ -175,8 +159,6 @@ function changingJob() {
 }
 
 changeJob.addEventListener('keyup', changingJob);
-
-//FUNCION REDES SOCIALES
 
 function writeMailfun (inputValue) {
   inputValue = changeMail.value;
@@ -243,7 +225,6 @@ changePhone.addEventListener('keyup', (event) => writePhonefun(event.currentTarg
 changeLinkedin.addEventListener('keyup', (event) => writeLikedinfun(event.currentTarget.value));
 changeGithub.addEventListener('keyup', (event) => writeGithubfun(event.currentTarget.value));
 
-//RESET
 const resetButton = document.querySelector('.js__button');
 
 function resetCard() {
@@ -285,7 +266,6 @@ function resetCard() {
 
 resetButton.addEventListener('click', resetCard);
 
-//ABRIR COMPARTIR:
 const clickShare = document.querySelector('.collapsebtn');
 
 const openCollapsable3 = () => {
@@ -293,8 +273,6 @@ const openCollapsable3 = () => {
   collapseShare.classList.toggle ('hidden');
   clickShare.classList.add('button-Create-after');
 };
-
-//PETICIONES AL SERVIDOR
 
 const shareUrl = document.querySelector('.js__response');
 
@@ -336,8 +314,6 @@ function sendRequest(){
 
 clickShare.addEventListener('click',sendRequest);
 
-// FUNCIONALIDAD DEL BOTÓN TWITTER
-
 const buttonTwitter = document.querySelector('.js__button-Twitter');
 
 function openTwitter ()  {
@@ -348,9 +324,3 @@ function openTwitter ()  {
 }
 
 buttonTwitter.addEventListener('click', openTwitter);
-
-
-
-//AÑADIDO CAMBIO IMPROVE PARA CONFIRMACIÓN
-
-//HOLA CHICAAAAAS MODULO 3
