@@ -310,7 +310,7 @@ function sendRequest(){
 
 clickShare.addEventListener('click',sendRequest);
 
-const buttonTwitter = document.querySelector('.js__button-Twitter');
+const buttonTwitter = document.querySelector('.js__link-twitter');
 
 function openTwitter ()  {
   const userUrl = cardUrl;

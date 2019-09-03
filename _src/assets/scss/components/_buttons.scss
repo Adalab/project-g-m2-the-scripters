@@ -1,13 +1,3 @@
-// .button-start-mobile{
-//   width: 129px;
-//   height: 42px;
-//   border-radius: 21px;
-//   background-color: $dirty-blue;
-//   border: none;
-//   text-align: center;
-//   @include Landing-StartText;
-// }
-
 .button-reset{
   width: 75px;
   height: 30px;
@@ -15,9 +5,8 @@
   border: solid 1px $white;
   background-color: transparent;
   box-sizing: border-box;
-    // text-align: center; -- como lleva icono no se
   @include Cards-Card-ResetButton;
-  }
+}
 
 .button-addImage{
   display: inline-block;
@@ -54,48 +43,4 @@
   font-family: "Font Awesome 5 Pro";
   font-weight: 400;
   color: $white;
-}
-
-// .button-Create-after{
-//   width: 199px;
-//   height: 50px;
-//   border-radius: 12px;
-//   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
-//   background-color: #d5d5d5;
-//   border: none;
-//   position: relative;
-//   padding: 13px 17px 13px 49px;
-//     @include Cards-Form-CreateButton;
-//   }
-
-// .button-Create-after:before{
-//   content: "\f2bb";
-//   left:17px;
-//   top: 14px;
-//   position: absolute;
-//   width: 25px;
-//   height: 22px;
-// }
-
-.button-Twitter{
-display: inline-block;
-box-sizing: border-box;
-width: 181px;
-height: 30px;
-border-radius: 3px;
-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
-background-color: #00a0f5;
-border: none;
-position: relative;
-padding: 4px 9px 0 36px;
-text-decoration: none;
-@include Cards-Form-TwitterButton;
-}
-.button-Twitter::before{
-  content: "\f099";
-  left:13px;
-  top: 5px;
-  position: absolute;
-  height: 18px;
-  font-family: "Font Awesome 5 Brands";
 }

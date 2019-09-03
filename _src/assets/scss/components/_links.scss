@@ -1,0 +1,23 @@
+.link-twitter{
+  display: inline-block;
+  box-sizing: border-box;
+  width: 181px;
+  height: 30px;
+  border-radius: 3px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+  background-color: #00a0f5;
+  border: none;
+  position: relative;
+  padding: 4px 9px 0 36px;
+  text-decoration: none;
+  @include Cards-Form-TwitterButton;
+  }
+
+  .link-twitter::before{
+    content: "\f099";
+    left:13px;
+    top: 5px;
+    position: absolute;
+    height: 18px;
+    font-family: "Font Awesome 5 Brands";
+  }
