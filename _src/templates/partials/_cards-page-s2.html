@@ -1,10 +1,10 @@
 <section class="cards__section-2">
   <div class="wrapper">
-    <form id="form" action="/signup" method="POST">
+    <form id="form" action="" method="POST">
       <fieldset class="form__fieldset">
         <legend class="form__fielset-legend">Elegir tema</legend>
         <div class="form__design js__collapsable">
-          <h4 class="form__design-title form-title title-1">Diseña</h4>
+          <h2 class="form__design-title form-title title-1">Diseña</h2>
         </div>
         <div class="form__design-content design-container collapsable-container">
           <h3 class="form-colors-text">Colores:</h3>
@@ -19,7 +19,9 @@
                   value="1"
                 />
                 <ul class="colors">
-                  <li class="color" style="background-color:#114e4e">Eden</li>
+                  <li class="color" style="background-color:#114e4e">
+                    Eden
+                  </li>
                   <li class="color" style="background-color:#438792">
                     Wedgewood
                   </li>
@@ -61,7 +63,9 @@
                   value="3"
                 />
                 <ul class="colors">
-                  <li class="color" style="background-color: #3e5b65">Fiord</li>
+                  <li class="color" style="background-color: #3e5b65">
+                    Fiord
+                  </li>
                   <li class="color" style="background-color: #eab052">
                     Ronchi
                   </li>
@@ -77,7 +81,7 @@
       <fieldset class="form__fieldset collapsed">
         <legend class="form__fielset-legend">Completar información</legend>
         <div class="form__fill js__collapsable">
-          <h4 class="form__fill-title form-title title-2">Rellena</h4>
+          <h2 class="form__fill-title form-title title-2">Rellena</h2>
         </div>
         <div class="form__fill-content fill-container collapsable-container">
           <div class="form__fill-input">
@@ -161,29 +165,29 @@
           </div>
         </div>
       </fieldset>
-    </form>
-    <div class="js__submit-container collapsed">
+      <div class="js__submit-container collapsed">
       <div class="submit-share js__collapsable">
-        <h4 class="submit-share form-title title-3">Comparte</h4>
+        <h2 class="submit-share form-title title-3">Comparte</h2>
       </div>
       <div class="submit-container collapsable-container">
         <button
           class="button-Create-before collapsebtn js__submit"
-          type="button"
-          form="form"
+          type="submit"
           id="submit"
         >
           Crear tarjeta
         </button>
       </div>
-      <div class="share-container collapsable-container hidden">
-        <p class="card-success">La tarjeta ha sido creada:</p>
-        <p class="share-link js__response">https://awesome-profile-card.com?id=A456DF0001</p>
-        <a class="button-Twitter js__button-Twitter"
-        href="" target="_blank">
-        Compartir en Twitter</a>
-      </div>
-  </div>
+    </form>
+
+    <div class="share-container collapsable-container hidden">
+      <p class="card-success">La tarjeta ha sido creada:</p>
+      <p class="share-link js__response"></p>
+      <a class="button-Twitter js__button-Twitter"
+      href="" target="_blank">
+      Compartir en Twitter</a>
+    </div>
+
   </div>
 </section>
 

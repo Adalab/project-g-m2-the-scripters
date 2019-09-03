@@ -288,7 +288,7 @@ resetButton.addEventListener('click', resetCard);
 //ABRIR COMPARTIR:
 const clickShare = document.querySelector('.collapsebtn');
 
-const openCollapsable2 = () => {
+const openCollapsable3 = () => {
   event.preventDefault ();
   collapseShare.classList.toggle ('hidden');
   clickShare.classList.add('button-Create-after');
@@ -331,7 +331,7 @@ function sendRequest(){
       cardUrl = data.cardURL;
       shareUrl.innerHTML = '<a class="share-link-url" target="__blank" href=' + cardUrl + '>' + cardUrl + '</a>';
     });
-  openCollapsable2();
+  openCollapsable3();
 }
 
 clickShare.addEventListener('click',sendRequest);
