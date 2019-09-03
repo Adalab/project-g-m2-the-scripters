@@ -1,4 +1,4 @@
-
+/* eslint-disable strict */
 const changeName = document.querySelector('.js__form-name');
 const writeName = document.querySelector('.js__title');
 const changeJob = document.querySelector('.js__form-job');
