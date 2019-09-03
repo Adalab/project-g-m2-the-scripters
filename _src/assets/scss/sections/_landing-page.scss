@@ -138,3 +138,10 @@
     height: 29px;
   }
 }
+
+.page-landing{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: $grey-landing;
+}

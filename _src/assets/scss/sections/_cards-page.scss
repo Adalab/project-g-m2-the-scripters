@@ -18,3 +18,10 @@
   }
 }
 
+.page-cards{
+  @media all and (min-width:768px){
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+}
