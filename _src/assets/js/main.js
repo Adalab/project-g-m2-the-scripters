@@ -1,4 +1,3 @@
-'use strict';
 
 const changeName = document.querySelector('.js__form-name');
 const writeName = document.querySelector('.js__title');
